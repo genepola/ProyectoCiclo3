@@ -1,7 +1,9 @@
 ProyectoCiclo3
-# Acerca del proyecto
 
-Este proyecto consiste en el desarrollo de una aplicación para la gestión de ventas físicas y virtuales utilizando las siguientes herramientas: 
+# Acerca del Proyecto
+
+Este proyecto consiste en el desarrollo de una aplicación para la gestión de linea de venta (creación, embalaje, despacho, ruta, ubicación, recepción). Utilizando estas herramientas:
+
 o	React JS
 o	HTML 5 
 o	CSS3 
@@ -14,6 +16,12 @@ o	(OAuth2)
 o	(Heroku)
 o	(Git / GitHub)
 
-# Descripción 
+# Descripción de integrantes
 
- Mi nombre es Paula Tigreros, tengo 25 años. Soy Ingeniera Industrial y  actualmente vivo en Cali.
+Paula Tigreros 
+Mi nombre es Paula Tigreros, tengo 25 años. Soy Ingeniera Industrial y  actualmente vivo en Cali.
+
+
+Genesis Paola Sierra
+Administradora de empresas, de 28 años emprendedora de una distribuidora de ferreterias.
+
