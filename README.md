@@ -17,4 +17,4 @@ o	(Git / GitHub)
 
 #Jhoan Sebastian Sierra 
 
-Mi nombre es Jhoan Sebastian Sierra Vargas
+Mi nombre es Jhoan Sebastian Sierra Vargas tengo 24 años, soy matematico y vivo en Bogota.
