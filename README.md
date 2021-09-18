@@ -30,10 +30,5 @@ Mi nombre es Ivan Andres Trochez tengo 24 años, soy ingeniero de sistemas, vivo
 Rodrigo Alejandro Meneses
 Mi nombre es Rodrigo Alejandro Meneses soy ingeniero de producción tengo 25 años y vivo en la ciudad de Bogotá
 
-<<<<<<< HEAD
-#Jhoan Sebastian Sierra 
-
-=======
-Jhoan Sebastian Sierra 
->>>>>>> Develop
+Jhoan Sebastian Sierra
 Mi nombre es Jhoan Sebastian Sierra Vargas tengo 24 años, soy matematico y vivo en Bogota.
