@@ -33,7 +33,8 @@ Mi nombre es Paula Tigreros, tengo 25 años. Soy Ingeniera Industrial y  actualm
 Genesis Paola Sierra
 Administradora de empresas, de 28 años emprendedora de una distribuidora de ferreterias.
 
-
 Mi nombre es Ivan Andres Trochez tengo 24 años, soy ingeniero de sistemas, vivo en Popayán(Cauca) y actualmente estoy estudiando en el ciclo 3 del reto mintic 2022. 
 
 Mi nombre es Rodrigo Alejandro Meneses soy ingeniero de producción tengo 25 años y vivo en la ciudad de Bogotá
+
+Mi nombre es Jhoan Sebastian Sierra soy matematico, tengo 24 años y vivo en la ciudad de Bogotá.
