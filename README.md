@@ -6,12 +6,18 @@ Este proyecto consiste en el desarrollo de una aplicación para la gestión de v
 
 ProyectoCiclo3
 
+
+# Acerca del Proyecto
+
+Este proyecto consiste en el desarrollo de una aplicación para la gestión de ventas físicas y virtuales utilizando las siguientes herramientas: 
+
 #Presentación proyecto 
 Este proyecto consiste en el desarrollo de una aplicación para la gestión de ventas físicas y virtuales utilizando las siguientes herramientas: 
 
 # Acerca del Proyecto
 
 Este proyecto consiste en el desarrollo de una aplicación para la gestión de linea de venta (creación, embalaje, despacho, ruta, ubicación, recepción). Utilizando estas herramientas:
+
 o	React JS
 o	HTML 5 
 o	CSS3 
@@ -37,4 +43,6 @@ Mi nombre es Ivan Andres Trochez tengo 24 años, soy ingeniero de sistemas, vivo
 
 Mi nombre es Rodrigo Alejandro Meneses soy ingeniero de producción tengo 25 años y vivo en la ciudad de Bogotá
 
-Mi nombre es Jhoan Sebastian Sierra soy matematico, tengo 24 años y vivo en la ciudad de Bogotá.
+#Jhoan Sebastian Sierra 
+
+Mi nombre es Jhoan Sebastian Sierra Vargas tengo 24 años, soy matematico y vivo en Bogota.
