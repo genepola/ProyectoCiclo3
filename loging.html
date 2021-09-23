@@ -4,10 +4,11 @@
         <title>loging</title>
         <link rel="stylesheet" href="css/estilos.css">
         <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+        <script src="js/renderer.js"></script>
     </head>
     <body>
         <h1>APLICACIÓN DE GESTION DE VENTAS</h1>
-        <form>
+        <form id="formulario">
             <main>
                 <section>
                 <h2>portal de acceso a la aplicación</h2>
@@ -21,11 +22,12 @@
                 </section>
 
                 <section>
-                <input type="submit" name="cancelar" value="Cancelar">
-                <input type="submit" name="ingresar" value="Ingresar">
+                <input type="submit" name="cancelar" value="Cancelar" onclick="return limpiar();">
+                <input type="submit" name="ingresar" value="Ingresar" onclick="return validar();">
                 </section>
             </main>
         </form>
         
     </body>
+    
 </html>
