@@ -1,6 +1,6 @@
 .Encabezado{
     
-        background-color: blue;
+        background-color: #0A3D69;
         width: auto;
         height: 70px;
         font-weight: bold;
@@ -34,38 +34,73 @@
 }
 
 #tablaFiltro{
-    border: black 2px solid;
-    width:74%;
+    width:70%;
+    margin: auto 40px;
+    tr td{
+        text-align: right;
+        max-width: 10px;
+    }
+    .Izquierda{
+        text-align: left!important;
+        padding-left: 10px;
+        max-width: 5px;
+    }
 }
 
 .TituloFiltro{
-    position: absolute;
-    margin-left: 161px;
-    margin-top: -6px;
-    background: white;
+    background-color: white;
+    width: 15%;
+    margin-top: 10px;
    //Revisar como sobreponer en margen
 }
 
 center{
     position: relative;
-    margin-right: auto;
-    margin-left: auto;
     padding-top: 10px;
-    height: 10px;
-    margin: 20px auto;
+    margin: 20px 40px;
 }
 
-td{
-    text-align: right;
-    padding: 10px;
+.container{
+    position: relative;
+    border: black solid 2px;
+    width: 80%;
 }
 
-.Izquierda{
-    text-align: left;
-}
+
 
 #ImagenLupa{
-    width: 71%;
-    padding: 16px;
+
     position:absolute;
+}
+
+input{
+    border: 2px solid;
+    width: 80%;
+}
+select{
+    border: 2px solid;
+    width: 80%;
+}
+
+.tablaPrincipal{
+    margin-top: 40px;
+    border: 2px  solid black;
+    border-collapse: collapse;
+    width: 90%;
+    height: 10%;
+    tr th{
+        background-color: rgba(128, 128, 128, 0.541);
+        padding: 15px;
+    }
+    tr td {
+        padding: 10px;
+        text-align: center;
+        border-left: solid 2px;
+        border-top: solid 2px;
+        } 
+    
+}
+
+.trTable{
+    background-color: rgba(128, 128, 128, 0.219);
 }
