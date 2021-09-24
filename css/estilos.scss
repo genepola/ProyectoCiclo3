@@ -1,3 +1,17 @@
+h1{
+    background-color: rgb(9, 9, 138);
+    color: white;
+    height: 40px;
+    width: 60%;
+}
+
+h2{
+    background-color: rgb(9, 9, 138);
+    color: white;
+    height: 40px;
+    width: 50%;
+    margin-left: 20%;
+}
 main {
     width: 50%;
     margin-left: auto;
@@ -6,8 +20,10 @@ main {
     border-radius:10px;
     padding: 20px;
     margin-top: 10%;
-
-    section:first-child {
-        
-    }
+}
+input {
+    margin-left: 20px;
+    float: none;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
