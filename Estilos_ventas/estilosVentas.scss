@@ -3,11 +3,13 @@
         background-color: blue;
         width: auto;
         height: 70px;
+        font-weight: bold;
 
         h1{
             color: white;
             margin-left: 10px;
             padding-top: 5px;
+            font-weight: bold;
         }
 
         h5{
@@ -16,6 +18,7 @@
             padding: 35px;
             color: white;
             font-size: 15px;
+            font-weight: bold;
         }
 
         .salir{
@@ -28,10 +31,41 @@
             height: 45%;
         }
 
+}
 
+#tablaFiltro{
+    border: black 2px solid;
+    width:74%;
+}
 
+.TituloFiltro{
+    position: absolute;
+    margin-left: 161px;
+    margin-top: -6px;
+    background: white;
+   //Revisar como sobreponer en margen
+}
 
-    
+center{
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+    height: 10px;
+    margin: 20px auto;
+}
 
-    
+td{
+    text-align: right;
+    padding: 10px;
+}
+
+.Izquierda{
+    text-align: left;
+}
+
+#ImagenLupa{
+    width: 71%;
+    padding: 16px;
+    position:absolute;
 }

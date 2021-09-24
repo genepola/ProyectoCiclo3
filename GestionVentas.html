@@ -25,7 +25,65 @@
         </header>
        
         <section>
-           
+            <div class="TituloFiltro"
+                <h1>
+                    Filtros de Búsqueda
+                </h1> 
+            </div>
+            
+            <center>
+                <table id="tablaFiltro">    
+                    <tr>
+                        <div id="ImagenLupa">
+                            <img src="/Imagenes/Lupa.png" alt="Lupa">
+                        </div>
+
+                    <td><h5>ID de la venta</h5> </td>
+                    <td class="Izquierda"><input type="text" size="15" maxlength="30" name="nombre"></td>          
+                    </tr>
+                
+                    <tr>              
+                    <td><h5>Fecha de venta entre</h5></td>
+                    <td class="Izquierda"><input type="date" name="fecha inicio" step="1" min="2021-01-01" max="2021-09-23" value="aaaa-mm-dd"></td>
+                    <td><h5>y</h5></td>
+                    <td class="Izquierda"><input type="date" name="fecha final" step="1" min="2021-01-01" max="2021-09-23" value="aaaa-mm-dd""></td>
+                    <!--validar rangos de fecha y dependencias-->
+                    <td><h5>Vendedor</h5></td>
+                    <td class="Izquierda"><select name="Vendedor" >
+                        <option value="1">Vendedor 1</option> 
+                        <option value="2">Vendedor 2</option> 
+                        <option value="3">Vendedor 3</option>
+                        <option value="10">Vendedor 4</option> 
+                        <option value="11">Vendedor 5</option> 
+                        <option value="12">Vendedor 6</option> 
+                    </select></td>
+                
+                    </tr>
+                
+                    <tr>
+                
+                        <td><h5>Filtro de transacción</h5></td>
+                        <td class="Izquierda"><select name="Tienda" >
+                        <option value="1">Tienda 1</option> 
+                        <option value="2">Tienda 2</option> 
+                        <option value="3">Tienda 3</option>
+                        <option value="10">Tienda virtual</option> 
+                        </select></td>
+                        <td><select name="Medio de pago" >
+                            <option value="1">Efectivo</option> 
+                            <option value="2">Crédito</option> 
+                        </select></td>
+                        <td><select name="Estado" >
+                            <option value="1">Embalaje</option> 
+                            <option value="2">Ruta</option> 
+                            <option value="3">Ubicación</option>
+                            <option value="10">Recepción</option> 
+                        </select></td>
+                    
+                    </tr>
+                </table>
+            </center>
+
         </section>
 
     </main>
