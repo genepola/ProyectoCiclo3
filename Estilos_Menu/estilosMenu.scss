@@ -13,7 +13,7 @@
     }
 
     h5{
-        margin-left: 36%;
+        margin-left: 37%;
         margin-top: -88px;
         padding: 35px;
         color: white;
@@ -36,15 +36,59 @@
 }
 
 .gestionUsuarios{
-    border: 2px solid black;
-    margin-top: 48px;
+    /* border: 2px solid black; */
+    margin-top: 5px;
     width: 70%;
-    h2{
+    height: 50%;
+    h3{
         text-align: left;
-        
+        margin-top: 5px;
+        font-size: 18px;
+    }
+
+    }
+
+
+
+.gestionVendedores{
+    /* border: 2px solid black; */
+    margin-top: 5px;
+    width: 70%;
+    height: 50%;
+    h3{
+        text-align: left;
+        margin-top: 5px;
+        font-size: 18px;
     }
 
 }
+
+.adminVentas{
+    /* border: 2px solid black; */
+    margin-top: 5px;
+    width: 70%;
+    height: 50%;
+    h3{
+        text-align: left;
+        margin-top: 5px;
+        font-size: 18px;
+    }
+
+    }
+
+.GestionVentas{
+    /* border: 2px solid black; */
+    margin-top: 5px;
+    width: 70%;
+    height: 50%;
+    h3{
+        text-align: left;
+        margin-top: 5px;
+        font-size: 18px;
+    }
+
+    }
+
 
 center{
     position: relative;
@@ -53,7 +97,31 @@ center{
 .imagenAgenda{
     float:left;
     margin-left: 20px;
-    margin-top: 10px;
+    margin-top: -10px;
     padding-right: 5px;
+    size: 50px;
 }
 
+.imagenVendedor{
+    float:left;
+    margin-left: 7px;
+    margin-top: -10px;
+    padding-right: 5px;
+    size: 50px;
+}
+
+.imagenCarrito{
+    float:left;
+    margin-left: 7px;
+    margin-top: -10px;
+    padding-right: 5px;
+    size: 50px;
+}
+
+.imagenGrafico{
+    float:left;
+    margin-left: 7px;
+    margin-top: -10px;
+    padding-right: 5px;
+    size: 50px;
+}
