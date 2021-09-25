@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos_ventas/estilosVentas.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <header class="Encabezado">
+            <h1>
+                GESTIÓN DE VENTAS
+            </h1>
+            <h5>
+                Nombre de usuario activo (admin123)
+            </h5>
+            <h5>
+                Fecha del sistema (22/09/2021)
+            </h5>
+            <button class="salir">
+                Salir
+            </button>
+        </header>
+       
+        <section>           
+            <center>
+                <div class="TituloFiltro">
+                    Filtros de Búsqueda
+                </div>
+                <div class="container">
+                    <table id="tablaFiltro">    
+                        <tr>
+                        <td>
+                            <h5>ID de la venta</h5>
+                        </td>
+                        <td class="Izquierda"><input type="text" size="15" maxlength="30" name="nombre"></td>          
+                        <td class="Izquierda">
+                            <img src="/Imagenes/Lupa.png" alt="Lupa">
+                        </td>
+                        </tr>
+                    
+                        <tr>              
+                        <td><h5>Fecha de venta entre</h5></td>
+                        <td class="Izquierda"><input type="date" name="fecha inicio" step="1" min="2021-01-01" max="2021-09-23" value="aaaa-mm-dd"></td>
+                        <td class="Izquierda"><input type="date" name="fecha final" step="1" min="2021-01-01" max="2021-09-23" value="aaaa-mm-dd""></td>
+                        <!--validar rangos de fecha y dependencias-->
+                        <td class="Izquierda">
+                            <select name="Vendedor" >
+                                <option value="1">Vendedor 1</option> 
+                                <option value="2">Vendedor 2</option> 
+                                <option value="3">Vendedor 3</option>
+                                <option value="10">Vendedor 4</option> 
+                                <option value="11">Vendedor 5</option> 
+                                <option value="12">Vendedor 6</option> 
+                            </select>
+                        </td>
+                    
+                        </tr>
+                    
+                        <tr>
+                    
+                            <td><h5>Filtro de transacción</h5></td>
+                            <td class="Izquierda"><select name="Tienda" >
+                            <option value="1">Tienda 1</option> 
+                            <option value="2">Tienda 2</option> 
+                            <option value="3">Tienda 3</option>
+                            <option value="10">Tienda virtual</option> 
+                            </select></td>
+                            <td class="Izquierda"><select name="Medio de pago" >
+                                <option >Medio de pago</option> 
+                                <option value="1">Efectivo</option>
+                                <option value="2">Crédito</option> 
+                            </select></td>
+                            <td class="Izquierda"><select name="Estado">
+                                <option>Estado</option> 
+                                <option value="1">Ruta</option> 
+                                <option value="2">Ubicación</option>
+                                <option value="3">Recepción</option> 
+                            </select></td>
+                        
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table class="tablaPrincipal">
+                        <tr>
+                            <th>ID venta</th>
+                            <th>Fecha de venta</th>
+                            <th>Tienda</th>
+                            <th>Vendedor</th>
+                            <th>Total Venta</th>
+                            <th>Estado</th>
+                        </tr>
+                        <tr>
+                           <td>DATO</td>
+                           <td>DATO</td>
+                           <td>DATO</td>
+                           <td>DATO</td>
+                           <td>DATO</td>
+                           <td>DATO</td>
+                        </tr>
+                        <tr class="trTable">
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                         </tr>
+                         <tr>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                         </tr>
+                         <tr class="trTable">
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                         </tr>
+                         <tr>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                         </tr>
+                         <tr class="trTable">
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                         </tr>
+                         <tr class="trTable">
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                         </tr>
+                         <tr class="trTable">
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                         </tr>
+                         <tr class="trTable">
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                         </tr>
+                         <tr class="trTable">
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                         </tr>
+                         <tr class="trTable">
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                         </tr>
+                         <tr class="trTable">
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                            <td>DATO</td>
+                         </tr>
+                         
+                    </table>
+                </div>
+            </center>
+
+        </section>
+
+    </main>
+   
+</body>
+</html>
