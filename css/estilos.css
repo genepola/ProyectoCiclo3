@@ -27,5 +27,7 @@ input {
   margin-left: 20px;
   float: none;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=estilos.css.map */
