@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos_Ingreso/estilosIngresoUsuarios.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <header class="Encabezado">
+            <h1>
+                GESTIÓN DE USUARIOS
+            </h1>
+            <h5>
+                Nombre de usuario activo (admin123)
+            </h5>
+            <h5>
+                Fecha del sistema (22/09/2021)
+            </h5>
+            <button class="salir">
+                Salir
+            </button>
+        </header>
+
+        <section class="Encabezado2">
+            <h2>
+                Ingreso/Modificación de Usuario
+            </h2> 
+        </section>
+       
+        <section class="Registro">
+            <table id="tablaIngresoDatos">    
+                <tr>
+                    <td><h5>Nombre</h5></td>
+                    <td class="Izquierda"><input type="text" size="70" maxlength="60" name="Nombre"></td>                
+                </tr>
+
+                <tr>
+                    <td><h5>ID de usuario</h5></td>
+                    <td class="Izquierda"><input type="text" size="70" maxlength="60" name="IDUsuario"></td>                
+                </tr>
+
+                <tr>
+                    <td><h5>Cargo</h5></td>
+                    <td class="Izquierda"><input type="text" size="70"  maxlength="60" name="Cargo"></td>                
+                </tr>
+
+                <tr>
+                    <td><h5>Rol de usuario</h5></td>
+                    <td class="Izquierda">
+                        <input type="checkbox" name="Administrador" value="1">Administrador
+                        <br>
+                        <input type="checkbox" name="Ejecutivo" value="2" checked>Ejecutivo
+                        <br>
+                        <input type="checkbox" name="Operario" value="3">Operario
+                    
+                    </td>                
+                </tr>
+
+                <tr>
+                    <td><h5>Contraseña</h5></td>
+                    <td class="Izquierda"><input type="text" size="70" maxlength="60" name="Contraseña"></td>                
+                </tr>
+
+
+                <tr>
+                    <td><h5>Confirmación de Contraseña</h5></td>
+                    <td class="Izquierda"><input type="text" size="70" maxlength="60" name="ConfirmContraseña"></td>                
+                </tr>
+               
+                
+            </table>
+
+            <div align="center">
+                <h5>
+                    <button class="Guardar">
+                    Guardar
+                    </button>
+                </h5>         
+            </div>
+            
+        </section>
+
+    </main>
+   
+</body>
+</html>
