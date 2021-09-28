@@ -1,8 +1,9 @@
+@charset "UTF-8";
 h1 {
   background-color: #0A3D69;
   color: white;
   height: 70px;
-  width: 60%;
+  width: auto;
   font-weight: bold;
 }
 
@@ -22,6 +23,38 @@ h2 {
 }
 
 .Caja2 {
-  margin-left: 45%;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.Usuario {
+  padding: 12px;
+}
+
+.Usuario input {
+  border: 2px solid black;
+  margin-left: -1px;
+}
+
+.Usuario label {
+  margin-left: 31px;
+}
+
+.Contraseña {
+  padding: 12px;
+}
+
+.Contraseña input {
+  border: 2px solid black;
+  margin-left: 3px;
+}
+
+center {
+  position: relative;
+  margin: 20px 40px;
+}
+
+main {
+  margin-top: 10%;
 }
 /*# sourceMappingURL=estilos.css.map */
