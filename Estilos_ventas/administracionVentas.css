@@ -31,51 +31,19 @@
   height: 45%;
 }
 
-#tablaFiltro {
-  width: 70%;
-  margin: auto 40px;
-}
-
-#tablaFiltro tr td {
-  text-align: right;
-  max-width: 10px;
-}
-
-#tablaFiltro .Izquierda {
-  text-align: left !important;
-  padding-left: 10px;
-  max-width: 5px;
-}
-
-.TituloFiltro {
-  background-color: white;
-  width: 15%;
-  margin-top: 10px;
-}
-
 center {
   position: relative;
   padding-top: 10px;
   margin: 20px 40px;
 }
 
+center input {
+  border: 2px solid black;
+}
+
 .container {
   position: relative;
   border: black solid 2px;
-  width: 80%;
-}
-
-#ImagenLupa {
-  position: absolute;
-}
-
-input {
-  border: 2px solid;
-  width: 80%;
-}
-
-select {
-  border: 2px solid;
   width: 80%;
 }
 
@@ -118,8 +86,43 @@ select {
   font-weight: bold;
 }
 
-.btnDiv {
+.labelTotal {
   float: right;
-  padding-right: 7.4%;
+  padding-right: 8.4%;
 }
-/*# sourceMappingURL=estilosVentas.css.map */
+
+.divBtnGuardar {
+  margin-left: 15%;
+}
+
+.divFiltros {
+  position: inherit;
+  left: 10%;
+}
+
+.divFiltros ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.divFiltros li {
+  margin: 8px;
+  padding: 10px;
+  float: left;
+}
+
+.divFiltros input {
+  height: 20px;
+  margin-left: 10px;
+}
+
+.divFiltros select {
+  height: 30px;
+  width: 177px;
+  border: 2px solid black;
+}
+
+.txtCliente {
+  width: 550px;
+}
+/*# sourceMappingURL=administracionVentas.css.map */
