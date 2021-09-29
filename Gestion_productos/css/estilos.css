@@ -32,7 +32,7 @@
 }
 
 .tablaPrincipal {
-  margin-top: 40px;
+  margin-top: 80px;
   border: 2px  solid black;
   border-collapse: collapse;
   width: 90%;
@@ -63,5 +63,19 @@
   position: relative;
   top: 30px;
   left: 5%;
+}
+
+.EstilosDeBotones {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  float: left;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.tbbuscarybotones {
+  float: left;
 }
 /*# sourceMappingURL=estilos.css.map */
