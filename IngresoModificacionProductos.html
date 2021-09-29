@@ -11,7 +11,7 @@
     <main>
         <header class="Encabezado">
             <h1>
-                GESTIÓN DE VENDEDORES
+                GESTIÓN DE PRODUCTOS
             </h1>
             <h5>
                 Nombre de usuario activo (admin123)
@@ -26,39 +26,31 @@
 
         <section class="Encabezado2">
             <h2>
-                Ingreso/Modificación de Vendedor
+                Ingreso/Modificación de Producto
             </h2> 
         </section>
        
         <section class="Registro">
             <table id="tablaIngresoDatos">    
                 <tr>
-                    <td><h5>Nombre</h5></td>
+                    <td><h5>Descripción de producto</h5></td>
                     <td class="Izquierda"><input type="text" size="70" maxlength="60" name="Nombre"></td>                
                 </tr>
 
                 <tr>
-                    <td><h5>ID de vendedor</h5></td>
+                    <td><h5>Valor Unitario</h5></td>
                     <td class="Izquierda"><input type="text" size="70" maxlength="60" name="IDVendedor"></td>                
                 </tr>
 
                 <tr>
-                    <td><h5>Especialidad</h5></td>
-                    <td class="Izquierda"><input type="text" size="70"  maxlength="60" name="Especialidad"></td>                
+                    <td><h5>Estado</h5></td>
+                    <td class="Izquierda">
+                        <select name="Estado">
+                            <option>Disponible</option>
+                            <option>No Disponible</option>   
+                        </select>
+                    </td>                 
                 </tr>
-
-                <tr>
-                    <td><h5>Teléfono</h5></td>
-                    <td class="Izquierda"><input type="text" size="70" maxlength="60" name="Telefono"></td>                
-                </tr>
-
-
-                <tr>
-                    <td><h5>Fecha de ingreso</h5></td>
-                    <td class="Izquierda"><input type="date" name="fechaIngresoVendedor" step="1" min="2021-01-01" max="2021-09-23" value="aaaa-mm-dd"></td>                
-                </tr>
-               
-                
             </table>
 
             <div align="center">

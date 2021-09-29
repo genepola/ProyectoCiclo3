@@ -33,29 +33,38 @@
         <section class="Registro">
             <table id="tablaIngresoDatos">    
                 <tr>
+                    <td><h5>ID</h5></td>
+                    <td class="Izquierda"><input type="text" size="70" maxlength="60" name="ID"></td>                
+                </tr>
+
+                <tr>
                     <td><h5>Nombre</h5></td>
                     <td class="Izquierda"><input type="text" size="70" maxlength="60" name="Nombre"></td>                
                 </tr>
 
                 <tr>
-                    <td><h5>ID de usuario</h5></td>
-                    <td class="Izquierda"><input type="text" size="70" maxlength="60" name="IDUsuario"></td>                
+                    <td><h5>Roles de usuario</h5></td>
+                    <td class="Izquierda"><select name="SeleccionRol">
+
+                        <option>Administrador</option>
+                        
+                        <option>Vendedor</option>
+                        
+                        </select></td>                
                 </tr>
 
                 <tr>
-                    <td><h5>Cargo</h5></td>
-                    <td class="Izquierda"><input type="text" size="70"  maxlength="60" name="Cargo"></td>                
-                </tr>
-
-                <tr>
-                    <td><h5>Rol de usuario</h5></td>
+                    <td><h5>Estado del usuario</h5></td>
                     <td class="Izquierda">
-                        <input type="checkbox" name="Administrador" value="1">Administrador
-                        <br>
-                        <input type="checkbox" name="Ejecutivo" value="2" checked>Ejecutivo
-                        <br>
-                        <input type="checkbox" name="Operario" value="3">Operario
-                    
+                        <select name="SeleccionRol">
+
+                            <option>Pendiente</option>
+                            
+                            <option>Autorizado</option>
+
+                            <option>No autorizado</option>
+                            
+                            </select>
                     </td>                
                 </tr>
 
