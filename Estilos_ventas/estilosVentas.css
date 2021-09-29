@@ -13,7 +13,7 @@
 }
 
 .Encabezado h5 {
-  margin-left: 35%;
+  margin-left: 24%;
   margin-top: -88px;
   padding: 35px;
   color: white;
@@ -34,6 +34,7 @@
 #tablaFiltro {
   width: 70%;
   margin: auto 40px;
+  border: black solid 2px;
 }
 
 #tablaFiltro tr td {
@@ -41,10 +42,14 @@
   max-width: 10px;
 }
 
-#tablaFiltro .Izquierda {
-  text-align: left !important;
+#tablaFiltro .Select {
   padding-left: 10px;
-  max-width: 5px;
+  width: 20%;
+}
+
+#tablaFiltro .input {
+  padding-left: 10px;
+  width: 25%;
 }
 
 .TituloFiltro {
@@ -61,12 +66,15 @@ center {
 
 .container {
   position: relative;
-  border: black solid 2px;
   width: 80%;
 }
 
 #ImagenLupa {
   position: absolute;
+}
+
+.imagenes {
+  height: 20%;
 }
 
 input {
