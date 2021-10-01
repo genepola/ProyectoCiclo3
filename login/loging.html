@@ -3,34 +3,19 @@
     <head>
         <title>loging</title>
         <link rel="stylesheet" href="css/estilos.css">
-        <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <script src="js/renderer.js"></script>
     </head>
     <body>
-        <h1>APLICACIÓN DE GESTION DE VENTAS</h1>
-            <main>
-                <section>
-            <div class="Ingreso">
-                <h2>Portal de acceso a la aplicación</h2>
-                </section>
-            </div>
-            <center>
-            <div class="Usuario">
-                <label>Usuario</label>
-                <input type="text" placeholder="Usuario" name="TBusuario" id="TBUsuario">
-            </div>
-            <div class="Contraseña">
-                <label>Contraseña</label>
-                <input type="password" placeholder="contraseña" name="PBUsuario" id="PBusuario"> 
-            </div>
-                <div class="Caja2">
-                <input type="submit" name="cancelar" value="Cancelar" onclick="return limpiar();">
-                <input type="submit" name="ingresar" value="Ingresar" onclick="return validar();">
-                </div>
-            </center>
-            </main>
-        </form>
-        
+        <section class="login">
+            <h5>Ingreso de Usuario</h5>
+            <input class="controles" type="text" name="Usuario" placeholder="Usuario">
+            <input class="controles" type="password" name="Contraseña" placeholder="Contraseña">
+            <input class="botones" type="submit" name="" value="Ingresar">
+            <p><a href="#">Ingresar con Google</a></p>
+            
+        </section>
+           
     </body>
     
 </html>
