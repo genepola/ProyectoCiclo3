@@ -60,4 +60,10 @@
   padding-left: 10px;
   max-width: 5px;
 }
+
+.sidebar {
+  background-color: blanchedalmond;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 /*# sourceMappingURL=estilosIngresoUsuarios.css.map */
