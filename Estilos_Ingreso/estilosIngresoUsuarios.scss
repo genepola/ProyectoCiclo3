@@ -13,9 +13,6 @@ body{
     font: 150% arial;
     background-color: #6e7c8a;
 }
-
-
-
 .body-expanded{
     margin-left: var(--width);
 }
@@ -96,7 +93,7 @@ body{
     border-radius: 5%;
     width: 30%;
     align-items: center;
- }
+}
 
 #sideMenu #profile #photo, #sideMenu #profile #name{
     font-size: 18px;
@@ -140,7 +137,6 @@ body{
 #sideMenu #menu-items .item img{
     width: 100%;
     border-radius: 50%;
-    background-color: white;
 }
 
 #sideMenu #menu-items .item .title{
@@ -194,7 +190,6 @@ body{
     height: 67px;
     background-color: #19222b;
     margin-left: 12%;
-  
 }
 
 .headerPpal-expanded span{
@@ -202,36 +197,20 @@ body{
     font-weight: bold;
     padding-left: 5px;
     color: white;
-
 }
 
 .headerPpal-expanded img{
     margin-top: 8px;
     margin-left: 40%;
     height: 70%;
-   
 }
 
 .headerPpal-collapsed{
     height: 67px;
     background-color: #19222b;
     margin-left: 1%;
-
-    .cerrar{
-        position: absolute; 
-        right: 10px; 
-        margin-top:20px;
-    }
-   
-    .Usuario{
-        font-size: 10px;
-        position: absolute; 
-        right: 120px; 
-        margin-top:25px;
-    }
- }
 }
-  
+
 .headerPpal-collapsed span{
     vertical-align: super;
     font-weight: bold;
@@ -242,14 +221,60 @@ body{
 .headerPpal-collapsed img{
     margin-top: 8px;
     margin-left: 40%;
-    height: 70%;    
+    height: 70%;
+}
+.iconosVentas{
+    margin-left: 15%;
+    margin-top: -10px;
+    width: 400px;
+}
+.iconosVentas ul li{
+    list-style: none;
+    float: left;
+    padding: 20px;
+    width: 40px;
+    cursor: pointer;
 }
 
+.iconosVentas ul li img{
+    height: 26px;
+}
+
+
+.iconosVentas ul li span{
+    font-size: 12px !important;
+    float: left;
+    color: white;
+}
+
+.filtro{
+    font-size: 16px !important;
+    margin-top: 4%;
+    margin-right: 14%;
+    float: right;
+    position: inherit;
+    span{
+        padding-right: 20px;
+        font-weight: bold;
+    }
+    input{
+        border-radius: 10px;
+        border: 1px solid #000000;
+        padding: 4px 4px 0 4px;
+    }
+    select{
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        border: 1px solid #000000;
+        padding: 3px 4px 0 4px;
+    }
+}
 
 .divTabla{
     position: absolute;
     margin: 20px 19%;
-    margin-top: 100px;
+    margin-top: 7%;
 
     table{
         font-size: 15px !important;
@@ -273,9 +298,4 @@ body{
             color: white;
         }
     }
-}
-
-.sidebar{
-    background-color: blanchedalmond;
-    object-fit: contain;
 }

@@ -38,7 +38,7 @@ body {
 
 #sideMenu #header {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-bottom: solid 1px black;
   padding-bottom: 10px;
   padding-right: 5px;
@@ -46,7 +46,7 @@ body {
 
 #sideMenu #header #title {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   overflow: hidden;
   font-size: 14px !important;
   margin-left: -20px;
@@ -66,7 +66,7 @@ body {
   padding: 10px;
   width: var(--width-collapsed);
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   float: right;
   margin-top: 10px;
 }
@@ -89,7 +89,7 @@ body {
 
 #sideMenu #profile #photo {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: var(--padding);
   margin: 0 auto;
 }
@@ -98,8 +98,8 @@ body {
   border-radius: 5%;
   width: 30%;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 #sideMenu #profile #photo, #sideMenu #profile #name {
@@ -140,7 +140,7 @@ body {
 
 #sideMenu #menu-items .item .icon {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: var(--padding);
   width: var(--width-collapsed);
 }
@@ -163,7 +163,7 @@ body {
 .menu-expanded {
   width: var(--width);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .menu-expanded #header #title {
