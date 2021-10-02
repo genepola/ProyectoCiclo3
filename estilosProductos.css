@@ -100,7 +100,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: white;
 }
 
 #sideMenu #profile #photo, #sideMenu #profile #name {
@@ -149,7 +148,6 @@ body {
 #sideMenu #menu-items .item img {
   width: 100%;
   border-radius: 50%;
-  background-color: white;
 }
 
 #sideMenu #menu-items .item .title {
@@ -317,5 +315,9 @@ body {
   background-color: #19222b;
   border: 0px;
   color: white;
+}
+
+#editarimg {
+  height: 30px;
 }
 /*# sourceMappingURL=estilosProductos.css.map */
