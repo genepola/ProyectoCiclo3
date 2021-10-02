@@ -59,4 +59,13 @@ body {
 .login a :hover {
   text-decoration: underline;
 }
+
+#logo {
+  width: 200px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
 /*# sourceMappingURL=estilos.css.map */
