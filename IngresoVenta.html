@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="IngresoVentas.css">
+</head>
+<body>
+    <div id="headerPpal" class="headerPpal-collapsed">
+        <img src="Imagenes/Carrito Mercado.png" alt="">
+        <span>INGRESO DE VENTAS</span>
+    </div>
+    <div id="sideMenu" class="menu-collapsed">
+        <div id="header">
+            <div id="title"></div>
+            <div id="menuBtn">
+                <div class="btn-hamburguesa"></div>
+                <div class="btn-hamburguesa"></div>
+                <div class="btn-hamburguesa"></div>
+            </div>
+        </div>
+    <!-- Perfil -->
+        <div id="profile">
+            <div id="photo"><img src="Imagenes/Vendedor.png" alt=""></div>
+            <div id="name"><span>Perfil</span></div>
+        </div>
+         <!-- Items  --> 
+    </div>
+    <div class="divFiltros">
+        <ul>
+            <li>Fecha de venta <input type="date" name="fechaVenta" ></li>
+            
+        </ul>
+         <ul>
+            <li> 
+            Identificación <input type="text" name="cliente" id="cliente" class="txtNit">
+            Cliente<input type="text" name="cliente" id="cliente" class="txtCliente">
+            </li> 
+         </ul>
+         <ul>
+             <li>
+                 <select>
+                     <option>Descripcion de producto</option>
+                     <option>Producto 1</option>
+                     <option>Producto 2</option>
+                 </select>
+             </li>
+             <li>Cantidad <input type="text" name="cantidad" id="cantidad"></li>
+             <li>
+                 <img src="/Imagenes/Agregar.png" alt="">
+             </li>
+         </ul>
+     </div>
+    
+    <div class="divTabla">
+        <table>
+            <tr>
+                <th>Producto ID</th>
+                <th>Descripción</th>
+                <th>Cantidad</th>
+                <th>Valor unitario</th>
+                <th>Valor total</th>
+                <th>Acción</th>
+            </tr>
+            <tr>
+                <td>Dato</td>
+                <td>Dato</td>
+                <td>Dato</td>
+                <td>Dato</td>
+                <td>Dato</td>
+                <td><img class="quitar" src="Imagenes/Quitar.png" alt=""></td>
+            </tr>
+            <tr>
+                <td>Dato</td>
+                <td>Dato</td>
+                <td>Dato</td>
+                <td>Dato</td>
+                <td>Dato</td>
+                <td><img class="quitar" src="Imagenes/Quitar.png" alt=""></td>
+            </tr>
+            <tr>
+                <td>Dato</td>
+                <td>Dato</td>
+                <td>Dato</td>
+                <td>Dato</td>
+                <td>Dato</td>
+                <td><img class="quitar" src="Imagenes/Quitar.png" alt=""></td>
+            </tr>
+        </table>
+        <div class="labelTotal">
+            <label>Total venta</label>
+            <Input></Input>
+        </div>
+        <div class="labelTotal2">
+            <label class="btnGuardarVentas">Guardar                
+            </label>
+        </div>
+
+    </div>
+
+
+    
+    <script src="Script/GestionVentas.js"></script>
+</body>
+</html>
