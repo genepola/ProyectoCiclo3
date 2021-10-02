@@ -93,7 +93,6 @@ body{
     border-radius: 5%;
     width: 30%;
     align-items: center;
-    background-color: white;
 }
 
 #sideMenu #profile #photo, #sideMenu #profile #name{
@@ -138,7 +137,6 @@ body{
 #sideMenu #menu-items .item img{
     width: 100%;
     border-radius: 50%;
-    background-color: white;
 }
 
 #sideMenu #menu-items .item .title{
@@ -323,6 +321,9 @@ body{
         height: 20px;
         margin-left: 10px;
     }
+    img{
+        height: 30px;
+    }
     select{
         height: 30px;
         width: 177px;
@@ -375,4 +376,7 @@ body{
     font-size: 15PX;
     margin-top: 3%;
     margin-left: 70%;
+}
+#editarimg{
+    height: 30px;
 }
