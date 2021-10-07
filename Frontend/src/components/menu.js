@@ -1,10 +1,15 @@
 import React from 'react'
 import '../App.css';
-
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 function menu() {
     return (
-        <div id="sideMenu" className="menu-collapsed">
+        <div id="sideMenu" className="menu-expanded">
             <div id="header">
                 <div id="title"></div>
                 <div id="menuBtn">
@@ -20,8 +25,22 @@ function menu() {
             <div id="menu-items">
                 <div class="item">
                     <a href={() => false}>
+                    
                         <div class="icon"><img src="Imagenes/Agregar.png" alt=""/></div>
-                        <div class="title"><span>Gestión de usuarios</span></div>
+                        {/* <div class="title"><span>Gestión de usuarios</span></div> */}
+                        <div class="title"><span><Link to="Gestionusuarios">Gestión usuarios</Link></span></div>
+                    </a>
+                </div> 
+                <div class="item separator">
+                
+                </div>
+                <div class="item">
+                    <a href={() => false}>
+                    
+                        <div class="icon"><img src="Imagenes/Agregar.png" alt=""/></div>
+                        {/* <div class="title"><span>Gestión de productos</span></div> */} 
+                        <div class="title"><span><Link to="Gestionproductos">Gestión productos</Link></span></div>
+
                     </a>
                 </div> 
                 <div class="item separator">
@@ -30,16 +49,7 @@ function menu() {
                 <div class="item">
                     <a href={() => false}>
                         <div class="icon"><img src="Imagenes/Agregar.png" alt=""/></div>
-                        <div class="title"><span>Gestión de productos</span></div>
-                    </a>
-                </div> 
-                <div class="item separator">
-                
-                </div>
-                <div class="item">
-                    <a href={() => false}>
-                        <div class="icon"><img src="Imagenes/Agregar.png" alt=""/></div>
-                        <div class="title"><span>Gestión de ventas</span></div>
+                        <div class="title"><span><Link to="Gestionventas">Gestión ventas</Link></span></div>
                     </a>
                 </div> 
                 <div class="item separator">
