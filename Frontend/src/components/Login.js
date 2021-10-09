@@ -6,9 +6,7 @@ import Background from '../assets/img/Fondo.png'
 function Login() {
     return (
         <div>
-            <section style={sectionStyle}>
-
-                <body> {/* < img src={Background}    />   */}
+                <body>
                     <img src={Logo} alt="" id="logo" />
                     <section class="login">
                         <h5>Ingreso de Usuario</h5>
@@ -19,7 +17,6 @@ function Login() {
                     </section>
 
                 </body>
-            </section>
         </div>
 
     );
