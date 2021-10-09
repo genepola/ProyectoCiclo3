@@ -1,4 +1,10 @@
 import React from 'react'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 function gestionventas() {
     return (
@@ -8,7 +14,7 @@ function gestionventas() {
                 <ul>
                     <li>
                         {/* <img src="Imagenes/Agregar.png" alt=""> */}
-                        <span>Nueva Venta</span>
+                        <div class="title"><span><Link to="Ingresoventas">Nueva venta</Link></span></div>
                     </li>
                     <li>
                         {/* <img src="Imagenes/Editar.png" alt=""> */}

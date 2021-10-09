@@ -1,5 +1,12 @@
 import React from 'react'
 import '../App.css'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+  
 const Gestionusuarios =() =>  {
     return (
         <div>
@@ -8,7 +15,7 @@ const Gestionusuarios =() =>  {
         <ul>
             <li>
                 {/* <img src="Imagenes/Agregar.png" alt=""> */}
-                <span>Nuevo Usuario</span>
+                <div class="title"><span><Link to="Ingresousuarios">Nuevo Usuario</Link></span></div>
             </li>
             <li>
                 {/* <img src="Imagenes/Editar.png" alt=""> */}

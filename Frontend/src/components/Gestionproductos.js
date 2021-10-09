@@ -1,5 +1,12 @@
 import React from 'react'
 import '../App.css'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+  
 const Gestionproductos =() =>{
     return (
         <div>
@@ -8,7 +15,7 @@ const Gestionproductos =() =>{
         <ul>
             <li>
                 {/* <img src="Imagenes/Agregar.png" alt=""> */}
-                <span>Nuevo Producto</span>
+                <div class="title"><span><Link to="Ingresoproductos">Nuevo Producto</Link></span></div>
             </li>
         </ul>
             
