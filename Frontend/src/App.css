@@ -411,3 +411,55 @@ body {
   margin-left: 70%;
 >>>>>>> f3bd46097f65527f992f13d4da04d0e18a827f10
 }
+
+
+.divFiltros {
+  position: center;
+  left: 100%;
+  margin-left: 30%;
+  margin-top: 3%
+}
+
+.divFiltros ul {
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.divFiltros li {
+  margin: 8px;
+  padding: 10px;
+  float: left;
+  font-size: 18px;
+}
+
+.divFiltros input {
+  height: 20px;
+  margin-left: 10px;
+}
+
+.divFiltros img {
+  height: 30px;
+}
+
+.divFiltros select {
+  height: 30px;
+  width: 177px;
+  border: 2px solid black;
+}
+
+.labelTotal {
+  float: right;
+  padding-right: -0.6%;
+  font-size: 15PX;
+  margin-top: 3%;
+}
+
+.labelTotal2 {
+  float: right;
+  padding-right: -0.6%;
+  font-size: 15PX;
+  margin-top: 3%;
+  margin-left: 70%;
+}
