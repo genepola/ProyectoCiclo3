@@ -3,13 +3,6 @@ import Logo from '../assets/img/logo_col_tech.png'
 import SignIn from '../assets/img/Sign_In.png'
 import Background from '../assets/img/Fondo.png'
 
-var sectionStyle = {
-    width: "100%",
-    height: "400px",
-    backgroundImage: { Background }
-  };
-
-
 function Login() {
     return (
         <div>
