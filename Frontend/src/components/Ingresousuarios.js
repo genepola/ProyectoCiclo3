@@ -1,8 +1,10 @@
 import React from 'react'
 import '../App.css'
+import Headeringresousu from './Headeringresousu';
 const Ingresousuarios = () => {
     return (
         <div>
+            <Headeringresousu/> 
             <div class="divTabla">
                 <table id="tablaIngresoDatos">
                     <tr>

@@ -1,25 +1,16 @@
 import React from 'react'
 import '../App.css'
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Editar from '../assets/img/Editar.png';
 import Agregar from '../assets/img/Agregar.png';
 import Headergestusuarios from './Headergestusuarios';
 
-=======
-=======
->>>>>>> React_implementacion
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
   } from "react-router-dom";
-  
-<<<<<<< HEAD
->>>>>>> f3bd46097f65527f992f13d4da04d0e18a827f10
-=======
->>>>>>> React_implementacion
+
 const Gestionusuarios =() =>  {
     return (
         <div>
@@ -27,21 +18,18 @@ const Gestionusuarios =() =>  {
                 <div class="iconosVentas">
         <ul>
             <li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <img src={Agregar} alt=""/>
+
+            <Link to="Ingresousuarios"><img src={Agregar} alt=""/></Link>
                 <span>Nuevo Usuario</span>
-=======
+
                 {/* <img src="Imagenes/Agregar.png" alt=""> */}
-                <div class="title"><span><Link to="Ingresousuarios">Nuevo Usuario</Link></span></div>
->>>>>>> f3bd46097f65527f992f13d4da04d0e18a827f10
-=======
+               {/*  <div class="title"><span><Link to="Ingresousuarios">Nuevo Usuario</Link></span></div> */}
+
                 {/* <img src="Imagenes/Agregar.png" alt=""> */}
-                <div class="title"><span><Link to="Ingresousuarios">Nuevo Usuario</Link></span></div>
->>>>>>> React_implementacion
+              {/*   <div class="title"><span><Link to="Ingresousuarios">Nuevo Usuario</Link></span></div> */}
             </li>
             <li>
-            <img src={Editar} alt=""/> 
+            <Link to="Ingresousuarios"><img src={Editar} alt=""/></Link>
                 <span>Editar Usuario</span>
             </li>
         </ul>

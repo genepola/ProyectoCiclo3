@@ -205,7 +205,7 @@ body {
 .headerPpal-expanded {
   height: 67px;
   background-color: #19222b;
-  margin-left: 12%;
+  margin-left: -1%;
 }
 
 .headerPpal-expanded span {
@@ -241,7 +241,7 @@ body {
 }
 
 .iconosVentas {
-  margin-left: 15%;
+  margin-left: 18%;
   margin-top: -10px;
   width: 400px;
 }
@@ -249,7 +249,7 @@ body {
 .iconosVentas ul li {
   list-style: none;
   float: left;
-  padding: 20px;
+  padding: 26px;
   width: 40px;
   cursor: pointer;
 }
@@ -295,7 +295,6 @@ body {
   margin-top: 7%;
 }
 
-
 .divTabla table {
   font-size: 15px !important;
   height: 60px;
@@ -320,7 +319,39 @@ body {
   color: white;
 }
 
-<<<<<<< HEAD
+.divTablaventas {
+  position: absolute;
+  margin: 20px 19%;
+  margin-top: 3%;
+}
+
+.divTablaventas table {
+  font-size: 15px !important;
+  height: 60px;
+  width: 870px;
+  color: white;
+  text-align: center;
+  background-color: #293542;
+}
+
+.divTablaventas th {
+  height: 35px;
+}
+
+.divTablaventas td {
+  background-color: #19222b;
+  height: 35px;
+}
+
+.divTablaventas td select {
+  background-color: #19222b;
+  border: 0px;
+  color: white;
+}
+
+
+
+
 #img_lapiz{
   height: 20px;
 }
@@ -357,13 +388,12 @@ body {
   position: absolute; 
   right: 120px; 
   margin-top:25px;
-=======
-
+}
 
 .divFiltros {
-  position: center;
+  position: inherit;
   left: 100%;
-  margin-left: 30%;
+  margin-left: 20%;
   margin-top: 3%
 }
 
@@ -378,12 +408,13 @@ body {
   margin: 8px;
   padding: 10px;
   float: left;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .divFiltros input {
   height: 20px;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 .divFiltros img {
@@ -398,9 +429,15 @@ body {
 
 .labelTotal {
   float: right;
-  padding-right: -0.6%;
+  padding-right: -1%;
   font-size: 15PX;
   margin-top: 3%;
+  background-color: white;
+  width: 150px;
+  margin-left:1% ;
+  height: 20px;
+  text-align: center;
+  
 }
 
 .labelTotal2 {
@@ -409,45 +446,8 @@ body {
   font-size: 15PX;
   margin-top: 3%;
   margin-left: 70%;
->>>>>>> f3bd46097f65527f992f13d4da04d0e18a827f10
 }
 
-
-.divFiltros {
-  position: center;
-  left: 100%;
-  margin-left: 30%;
-  margin-top: 3%
-}
-
-.divFiltros ul {
-  list-style-type: none;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-.divFiltros li {
-  margin: 8px;
-  padding: 10px;
-  float: left;
-  font-size: 18px;
-}
-
-.divFiltros input {
-  height: 20px;
-  margin-left: 10px;
-}
-
-.divFiltros img {
-  height: 30px;
-}
-
-.divFiltros select {
-  height: 30px;
-  width: 177px;
-  border: 2px solid black;
-}
 
 .labelTotal {
   float: right;
@@ -463,3 +463,97 @@ body {
   margin-top: 3%;
   margin-left: 70%;
 }
+
+.txtNit {
+  width: 132px;
+}
+
+.txtCliente {
+  width: 376px;
+  background-color: white;
+}
+
+.quitar {
+  width: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: arial;
+}
+
+.login {
+  width: 400px;
+  height: 340px;
+  background: #6e7c8a;
+  margin: auto;
+  margin-top: 180px;
+  -webkit-box-shadow: 7px 13px 37px #000;
+          box-shadow: 7px 13px 37px #000;
+  padding: 20px 30px;
+  border-top: 4px solid #19222b;
+  color: white;
+}
+
+.login h5 {
+  margin: 0;
+  text-align: center;
+  height: 40px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid;
+  font-size: 20px;
+}
+
+.controles {
+  width: 100%;
+  border: 1px solid #19222b;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.botones {
+  width: 100%;
+  height: 40px;
+  background: #19222b;
+  border: none;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.login p {
+  height: 40px;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+.login a :hover {
+  text-decoration: underline;
+}
+
+#logo {
+  width: 200px;
+  position: absolute;
+  top: 100px;
+  left: 54%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+
+#SignIn{
+width: 35px;
+margin-left: 147px;
+margin-top: -5px;
+height: 47px;
+filter: drop-shadow(5px 5px 10px #2e3e4e);
+}
+
+

@@ -1,8 +1,12 @@
 import React from 'react'
 import '../App.css'
+import Headeringresoventas from './Headeringresoventas';
+import Agregar from '../assets/img/Agregar.png';
+import Quitar from  '../assets/img/Quitar.png';
 const Ingresoventas = () => {
     return (
         <div>
+            <Headeringresoventas/> 
             <div class="divFiltros">
                 <ul>
                     <li>Fecha de venta <input type="date" name="fechaVenta" /></li>
@@ -23,12 +27,12 @@ const Ingresoventas = () => {
                 </li>
                 <li>Cantidad <input type ="text" name="cantidad" id="cantidad"/></li>
                 <li>
-                {/* <{img src="Imagenes/Agregar.png" alt="Agregar"}> */}
+                <img src={Agregar} alt=""/>
                 </li>
                 </ul>
                 </div>
 
-                <div class ="divTabla">
+                <div class ="divTablaventas">
                 <table>
                 <tr>
                 <th>Producto ID</th>
@@ -44,7 +48,7 @@ const Ingresoventas = () => {
                 <td>Dato</td>
                 <td>Dato</td>
                 <td>Dato</td>
-                <td>{/* <img class ="quitar" src="Imagenes/Quitar.png" alt=""> */}</td>
+                <td><img class="quitar" src={Quitar} alt=""/></td>
                 </tr>
                 <tr>
                 <td>Dato</td>
@@ -52,7 +56,7 @@ const Ingresoventas = () => {
                 <td>Dato</td>
                 <td>Dato</td>
                 <td>Dato</td>
-                <td>{/* <{img class ="quitar" src="Imagenes/Quitar.png" alt=""}> */}</td>
+                <td><img class="quitar" src={Quitar} alt=""/></td>
                 </tr>
                 <tr>
                 <td>Dato</td>
@@ -60,11 +64,11 @@ const Ingresoventas = () => {
                 <td>Dato</td>
                 <td>Dato</td>
                 <td>Dato</td>
-                <td>{/* <{img class ="quitar" src="Imagenes/Quitar.png" alt=""}> */}</td>
+                <td><img class="quitar" src={Quitar} alt=""/></td>
                 </tr>
                 </table>
                 <div class ="labelTotal">
-                Totalventa  <input type ="text" name="venta" id="venta" class ="txtCliente"/>
+                <label class ="txtCliente">TOTAL VENTAS</label>
                 </div>
                 <div class ="labelTotal2">
                 <button class ="btnGuardarVentas">Guardar

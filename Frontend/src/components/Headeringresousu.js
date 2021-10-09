@@ -1,16 +1,13 @@
 import React from 'react'
-import Persona from '../assets/img/persona_mas.png'
+import Agenda from '../assets/img/Agenda.png'
 
 
-const Headergestusuarios = () => {
-    const titleadd = e =>  { 
-        const { handletitle }=e.target 
-    }
+const Headeringresousu = () => {
     return (
         <div>
             <div id="headerPpal" class="headerPpal-expanded">
-                <img src={Persona} alt="" />
-                <span>GESTION DE USUARIOS</span>
+                <img src={Agenda} alt="" />
+                <span>INGRESO/EDICIÓN DE USUARIO</span>
                 <button id ="Cerrar" class="Cerrar">
                     Cerrar sesión
                 </button>
@@ -19,8 +16,9 @@ const Headergestusuarios = () => {
                 </span>
             </div>
         </div>
+        
 
     )
 }
 
-export default Headergestusuarios
+export default Headeringresousu

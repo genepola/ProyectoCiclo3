@@ -1,13 +1,8 @@
 import React from 'react'
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Headergestventas from './Headergestventas';
 import Agregar from '../assets/img/Agregar.png';
 import Editar from '../assets/img/Editar.png';
 import Guardar from '../assets/img/Guardar.png';
-=======
-=======
->>>>>>> React_implementacion
 import {
     BrowserRouter as Router,
     Switch,
@@ -15,7 +10,6 @@ import {
     Link
   } from "react-router-dom";
 
->>>>>>> f3bd46097f65527f992f13d4da04d0e18a827f10
 function gestionventas() {
     return (
 
@@ -24,21 +18,18 @@ function gestionventas() {
             <div class="iconosVentas">
                 <ul>
                     <li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <img src={Agregar} alt=""/>
+
+                    <Link to="Ingresoventas"><img src={Agregar} alt=""/></Link>
                         <span>Nueva Venta</span>
-=======
+
                         {/* <img src="Imagenes/Agregar.png" alt=""> */}
-                        <div class="title"><span><Link to="Ingresoventas">Nueva venta</Link></span></div>
->>>>>>> f3bd46097f65527f992f13d4da04d0e18a827f10
-=======
+                        {/* <div class="title"><span><Link to="Ingresoventas">Nueva venta</Link></span></div> */}
+
                         {/* <img src="Imagenes/Agregar.png" alt=""> */}
-                        <div class="title"><span><Link to="Ingresoventas">Nueva venta</Link></span></div>
->>>>>>> React_implementacion
+                        {/* <div class="title"><span><Link to="Ingresoventas">Nueva venta</Link></span></div> */}
                     </li>
                     <li>
-                    <img src={Editar} alt=""/> 
+                    <Link to="Ingresoventas"><img src={Editar} alt=""/></Link>
                         <span>Editar Venta</span>
                     </li>
                     <li>

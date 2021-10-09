@@ -1,16 +1,13 @@
-import React from 'react'
-import Persona from '../assets/img/persona_mas.png'
+import React from 'react';
+import Carrito_Mercado from '../assets/img/Carrito_Mercado.png';
 
 
-const Headergestusuarios = () => {
-    const titleadd = e =>  { 
-        const { handletitle }=e.target 
-    }
+const Headeringresoventas = () => {
     return (
         <div>
             <div id="headerPpal" class="headerPpal-expanded">
-                <img src={Persona} alt="" />
-                <span>GESTION DE USUARIOS</span>
+                <img src={Carrito_Mercado} alt="" />
+                <span>INGRESO/EDICIÓN DE VENTAS</span>
                 <button id ="Cerrar" class="Cerrar">
                     Cerrar sesión
                 </button>
@@ -19,8 +16,9 @@ const Headergestusuarios = () => {
                 </span>
             </div>
         </div>
+        
 
     )
 }
 
-export default Headergestusuarios
+export default Headeringresoventas

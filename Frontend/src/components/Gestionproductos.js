@@ -1,15 +1,8 @@
 import React from 'react'
 import '../App.css'
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Headergestproduct from './Headergestproduct';
 import Agregar from '../assets/img/Agregar.png';
 import Lapiz from '../assets/img/Lapis.png';
-
-
-=======
-=======
->>>>>>> React_implementacion
 import {
     BrowserRouter as Router,
     Switch,
@@ -17,10 +10,6 @@ import {
     Link
   } from "react-router-dom";
   
-<<<<<<< HEAD
->>>>>>> f3bd46097f65527f992f13d4da04d0e18a827f10
-=======
->>>>>>> React_implementacion
 const Gestionproductos =() =>{
     return (
 
@@ -29,18 +18,13 @@ const Gestionproductos =() =>{
         <div class="iconosVentas">
         <ul>
             <li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <img src={Agregar} alt=""/>
+            <Link to="Ingresoproductos"><img src={Agregar} alt=""/></Link>
                 <span>Nuevo Producto</span>
-=======
                 {/* <img src="Imagenes/Agregar.png" alt=""> */}
-                <div class="title"><span><Link to="Ingresoproductos">Nuevo Producto</Link></span></div>
->>>>>>> f3bd46097f65527f992f13d4da04d0e18a827f10
-=======
+                {/* <div class="title"><span><Link to="Ingresoproductos">Nuevo Producto</Link></span></div> */}
                 {/* <img src="Imagenes/Agregar.png" alt=""> */}
-                <div class="title"><span><Link to="Ingresoproductos">Nuevo Producto</Link></span></div>
->>>>>>> React_implementacion
+                {/* <div class="title"><span><Link to="Ingresoproductos">Nuevo Producto</Link></span></div> */}
+
             </li>
         </ul>
             
@@ -67,7 +51,7 @@ const Gestionproductos =() =>{
                 <td>Dato</td>
                 <td>Dato</td>
                 <td>Dato</td>
-                <td><img src={Lapiz}  alt="" id="img_lapiz" /></td>
+                <td><Link to="Ingresoproductos"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
 
             </tr>
             <tr>
@@ -75,7 +59,7 @@ const Gestionproductos =() =>{
                 <td>Dato</td>
                 <td>Dato</td>
                 <td>Dato</td>
-                <td><img src={Lapiz}  alt="" id="img_lapiz" /></td>
+                <td><Link to="Ingresoproductos"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
                 
             </tr>
             <tr>
@@ -83,7 +67,7 @@ const Gestionproductos =() =>{
                 <td>Dato</td>
                 <td>Dato</td>
                 <td>Dato</td>
-                <td><img src={Lapiz}  alt="" id="img_lapiz" /></td>
+                <td><Link to="Ingresoproductos"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
             </tr>
         </table>
     </div>

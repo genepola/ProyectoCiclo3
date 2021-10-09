@@ -22,7 +22,7 @@ function menu() {
                 </div>
             </div>
             <div id="profile">
-                <div id="photo"><img src={Logo} alt=""/></div>
+                <div id="photo"><Link to="Login"><img src={Logo} alt=""/></Link></div>
                 <div id="name"><span>Perfil</span></div>
             </div>
             <div id="menu-items">
