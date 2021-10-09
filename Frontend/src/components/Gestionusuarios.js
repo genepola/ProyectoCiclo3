@@ -1,17 +1,36 @@
 import React from 'react'
 import '../App.css'
+<<<<<<< HEAD
+import Editar from '../assets/img/Editar.png';
+import Agregar from '../assets/img/Agregar.png';
+import Headergestusuarios from './Headergestusuarios';
+
+=======
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+  
+>>>>>>> f3bd46097f65527f992f13d4da04d0e18a827f10
 const Gestionusuarios =() =>  {
     return (
         <div>
-                
+              <Headergestusuarios />  
                 <div class="iconosVentas">
         <ul>
             <li>
-                {/* <img src="Imagenes/Agregar.png" alt=""> */}
+<<<<<<< HEAD
+            <img src={Agregar} alt=""/>
                 <span>Nuevo Usuario</span>
+=======
+                {/* <img src="Imagenes/Agregar.png" alt=""> */}
+                <div class="title"><span><Link to="Ingresousuarios">Nuevo Usuario</Link></span></div>
+>>>>>>> f3bd46097f65527f992f13d4da04d0e18a827f10
             </li>
             <li>
-                {/* <img src="Imagenes/Editar.png" alt=""> */}
+            <img src={Editar} alt=""/> 
                 <span>Editar Usuario</span>
             </li>
         </ul>
