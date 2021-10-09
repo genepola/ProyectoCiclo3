@@ -6,4 +6,6 @@ router.post(
     '/new',
     crearUsuario
 );
+
+
 module.exports=router;
