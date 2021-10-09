@@ -1,4 +1,5 @@
 const { response }= require('express');
+const { populate } = require('../models/usuario');
 const  Usuario  = require('../models/usuario');
 const crearUsuario = async (req, res = response) => {
    const { name, password, cedula } = req.body;
@@ -29,6 +30,35 @@ const crearUsuario = async (req, res = response) => {
         })
     }
 }
+const getusuarios = async (req, resp = response) => {
+    const usuarios = await Usuario.find();
+      
+    resp.status(200).json({
+        ok:true,
+        msg: 'Lista de Usuarios',
+        usuarios
+    });
+}
+
+const actualizarUsuario = (req, resp = response) => {
+    resp.json({
+        ok:true,
+        msg: 'actualizar usuario'
+    });
+}
+
+const eliminarUsuario = (req, resp = response) => {
+    resp.json({
+        ok:true,
+        msg: 'eliminar usuario'
+    });
+}
 
 
-module.exports={crearUsuario};
+
+module.exports={
+    crearUsuario,
+    getusuarios,
+    actualizarUsuario,
+    eliminarUsuario
+};

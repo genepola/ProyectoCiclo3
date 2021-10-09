@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { crearUsuario } = require('../Controllers/auth');
+const { crearUsuario, getusuarios,actualizarUsuario,eliminarUsuario } = require('../Controllers/auth');
 const router = Router();
 
 router.post(
@@ -7,5 +7,19 @@ router.post(
     crearUsuario
 );
 
+router.get(
+    '/listar', 
+    getusuarios
+);
+
+router.put(
+    '/actualizar/:id', 
+    actualizarUsuario
+);
+
+router.delete(
+    '/eliminar/:id', 
+    eliminarUsuario
+);
 
 module.exports=router;

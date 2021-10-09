@@ -29,9 +29,37 @@ const crearProducto = async (req, res = response) => {
         })
     }
 }
+const getproductos = async (req, resp = response) => {
+    const productos = await ProductosModelo.find();
+      
+    resp.status(200).json({
+        ok:true,
+        msg: 'Lista de productos',
+        productos
+    });
+}
+
+const actualizarProducto = (req, resp = response) => {
+    resp.json({
+        ok:true,
+        msg: 'actualizar producto'
+    });
+}
+
+const eliminarProducto = (req, resp = response) => {
+    resp.json({
+        ok:true,
+        msg: 'eliminar producto'
+    });
+}
 
 
-module.exports={crearProducto};
+module.exports={
+    crearProducto,
+    getproductos,
+    actualizarProducto,
+    eliminarProducto
+};
 
 /** Actualizar productos */
 

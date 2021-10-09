@@ -15,8 +15,13 @@ const usuarioSchema = Schema({
         unique: true
     },
     role:{
-        type: String,
+        type: Schema.Types.ObjectId,
+        ref: 'rol',
         require: true
+    },
+    estado: {
+        type: Boolean,
+        require: true 
     }
 },);
 
