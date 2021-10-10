@@ -1,5 +1,7 @@
 const { response } = require('express');
 const  ProductosModelo  = require('../models/productos');
+
+
 const crearProducto = async (req, res = response) => {
     const { ID, Descripcion } = req.body;
     try {
@@ -39,18 +41,63 @@ const getproductos = async (req, resp = response) => {
     });
 }
 
-const actualizarProducto = (req, resp = response) => {
-    resp.json({
-        ok:true,
-        msg: 'actualizar producto'
-    });
+const actualizarProducto = async (req, resp = response) => {
+
+    const productoID = req.params.id;
+    try {
+        const producto = await ProductosModelo.findById(productoID);
+        if(!producto){
+            resp.status(404).json({
+                ok: false,
+                msg: 'El id del producto no coincide con ningun elemento en la base de datos',
+            });
+        }
+
+        const productoActualizado = await ProductosModelo.findByIdAndUpdate(
+            productoID, req.body, {
+                new: true
+            });
+
+        resp.json({
+            ok:true,
+            msg: 'actulizar producto',
+            producto: productoActualizado
+        });
+    } catch (error) {
+        console.log(error);
+    }
+    
 }
 
-const eliminarProducto = (req, resp = response) => {
-    resp.json({
-        ok:true,
-        msg: 'eliminar producto'
-    });
+const eliminarProducto = async (req, resp = response) => {
+    const productoId = req.params.id;
+
+    try {
+        
+        const producto = await ProductosModelo.findById(productoId);
+
+        if(!producto) {
+            resp.status(404).json({
+                ok: false,
+                msg: 'El id del producto no coincide con ningun elemento en la base de datos',
+            });
+        }
+
+        await ProductosModelo.findByIdAndDelete(productoId);
+
+        resp.json({
+            ok: true,
+            msg: 'Producto eliminado de manera exitosa'
+        });
+
+
+    } catch (error) {
+        console.log(error);
+        resp.status(500).json({
+            ok: false,
+            msg: 'error al eliminar el producto',
+        });
+    }
 }
 
 

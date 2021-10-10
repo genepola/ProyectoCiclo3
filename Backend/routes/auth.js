@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { crearUsuario, getusuarios,actualizarUsuario,eliminarUsuario } = require('../Controllers/auth');
+const { crearUsuario, getusuarios,actualizarUsuario,eliminarUsuario, loginUsuario } = require('../Controllers/auth');
 const router = Router();
 
 router.post(
@@ -22,4 +22,8 @@ router.delete(
     eliminarUsuario
 );
 
+router.post(
+    '/', 
+    loginUsuario
+);
 module.exports=router;
