@@ -1,6 +1,6 @@
 const { response } = require('express');
-const { populate } = require('../models/usuario');
 const Usuario = require('../models/usuario');
+const Rol = require('../models/rol');
 const bcrypt = require('bcryptjs');
 
 
@@ -34,8 +34,8 @@ const crearUsuario = async (req, res = response) => {
     }
 }
 const getusuarios = async (req, resp = response) => {
-    const usuarios = await Usuario.find();
-
+    const usuarios = await Usuario.find().populate('roleeee','name');
+    console.log(usuarios);
     resp.status(200).json({
         ok: true,
         msg: 'Lista de Usuarios',
@@ -150,11 +150,31 @@ const loginUsuario = async (req, resp = response) => {
 }
 
 
+const getCategorias = async (req, resp = response) => {
+    try {
+
+        const categorias = await Rol.find();
+        resp.status(200).json({
+            ok: true,
+            msg: 'Lista de categorias',
+            categorias
+        });
+    } catch (error) {
+        console.log(error);
+        resp.status(500).json({
+            ok: false,
+            msg: 'error al crear el producto',
+        });
+    }
+}
+
+
 
 module.exports = {
     crearUsuario,
     getusuarios,
     actualizarUsuario,
     eliminarUsuario,
-    loginUsuario
+    loginUsuario,
+    getCategorias
 };

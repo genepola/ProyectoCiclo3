@@ -14,9 +14,9 @@ const usuarioSchema = Schema({
         require: true,
         unique: true
     },
-    role:{
+    roleeee:{
         type: Schema.Types.ObjectId,
-        ref: 'rol',
+        ref: 'role',
         require: true
     },
     estado: {
