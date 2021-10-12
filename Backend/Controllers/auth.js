@@ -12,7 +12,7 @@ const crearUsuario = async (req, res = response) => {
         if (usuario) {
             return res.status(400).json({
                 ok: false,
-                msg: 'ya existe un usuario registrado con este email'
+                msg: 'ya existe un usuario registrado con esta cédula'
             });
         }
 
