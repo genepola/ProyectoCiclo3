@@ -1,5 +1,11 @@
-import React from 'react'
-import Persona from '../assets/img/persona_mas.png'
+import React from 'react';
+import Persona from '../assets/img/persona_mas.png';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 
 const Headergestusuarios = () => {
@@ -11,9 +17,9 @@ const Headergestusuarios = () => {
             <div id="headerPpal" class="headerPpal-expanded">
                 <img src={Persona} alt="" />
                 <span>GESTION DE USUARIOS</span>
-                <button id ="Cerrar" class="Cerrar">
+                <Link to="Login"><button id ="Cerrar" class="Cerrar">
                     Cerrar sesión
-                </button>
+                </button></Link>
                 <span id="Usuario" class="Usuario" >
                     Nombre de usuario activo (admin123)
                 </span>

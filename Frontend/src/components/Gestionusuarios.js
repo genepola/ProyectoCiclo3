@@ -3,6 +3,7 @@ import '../App.css'
 import Editar from '../assets/img/Editar.png';
 import Agregar from '../assets/img/Agregar.png';
 import Headergestusuarios from './Headergestusuarios';
+import Lapiz from '../assets/img/Lapis.png';
 
 import {
     BrowserRouter as Router,
@@ -28,10 +29,7 @@ const Gestionusuarios =() =>  {
                 {/* <img src="Imagenes/Agregar.png" alt=""> */}
               {/*   <div class="title"><span><Link to="Ingresousuarios">Nuevo Usuario</Link></span></div> */}
             </li>
-            <li>
-            <Link to="Ingresousuarios"><img src={Editar} alt=""/></Link>
-                <span>Editar Usuario</span>
-            </li>
+            
         </ul>
             
     </div>
@@ -53,14 +51,14 @@ const Gestionusuarios =() =>  {
                 <td>Dato</td>
                 <td>Dato</td>
                 <td>Dato</td>
-                <td>Dato</td>
+                <td><Link to="Ingresousuarios"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
             </tr>
             <tr>
                 <td>Dato</td>
                 <td>Dato</td>
                 <td>Dato</td>
                 <td>Dato</td>
-                <td>Dato</td>
+                <td><Link to="Ingresousuarios"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
                 
             </tr>
             <tr>
@@ -68,7 +66,7 @@ const Gestionusuarios =() =>  {
                 <td>Dato</td>
                 <td>Dato</td>
                 <td>Dato</td>
-                <td>Dato</td>
+                <td><Link to="Ingresousuarios"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
             </tr>
         </table>
     </div>

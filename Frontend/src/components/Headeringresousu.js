@@ -1,5 +1,11 @@
-import React from 'react'
-import Agenda from '../assets/img/Agenda.png'
+import React from 'react';
+import Agenda from '../assets/img/Agenda.png';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 
 const Headeringresousu = () => {
@@ -8,11 +14,12 @@ const Headeringresousu = () => {
             <div id="headerPpal" class="headerPpal-expanded">
                 <img src={Agenda} alt="" />
                 <span>INGRESO/EDICIÓN DE USUARIO</span>
-                <button id ="Cerrar" class="Cerrar">
+                <Link to="Login"> <button id ="Cerrar" class="Cerrar">
                     Cerrar sesión
-                </button>
+                </button></Link>
                 <span id="Usuario" class="Usuario" >
                     Nombre de usuario activo (admin123)
+                    
                 </span>
             </div>
         </div>
