@@ -1,5 +1,12 @@
 const { Router } = require('express');
-const { crearUsuario, getusuarios,actualizarUsuario,eliminarUsuario, loginUsuario, getCategorias } = require('../Controllers/auth');
+const { crearUsuario,
+     getusuarios,
+     actualizarUsuario,
+     eliminarUsuario,
+     loginUsuario,
+     getCategorias,
+     findById,
+     getEstados } = require('../Controllers/auth');
 const router = Router();
 
 router.post(
@@ -17,6 +24,11 @@ router.get(
     getCategorias
 );
 
+router.get(
+    '/estados', 
+    getEstados
+);
+
 router.put(
     '/actualizar/:id', 
     actualizarUsuario
@@ -30,5 +42,10 @@ router.delete(
 router.post(
     '/', 
     loginUsuario
+);
+
+router.get(
+    '/findById/:id', 
+    findById
 );
 module.exports=router;

@@ -1,6 +1,7 @@
 const { response } = require('express');
 const Usuario = require('../models/usuario');
 const Rol = require('../models/rol');
+const Estado = require('../models/EstadoUsuario');
 const bcrypt = require('bcryptjs');
 
 
@@ -34,7 +35,7 @@ const crearUsuario = async (req, res = response) => {
     }
 }
 const getusuarios = async (req, resp = response) => {
-    const usuarios = await Usuario.find().populate('roleeee','name');
+    const usuarios = await Usuario.find().populate('roles','name').populate('estado','status');
     console.log(usuarios);
     resp.status(200).json({
         ok: true,
@@ -75,15 +76,15 @@ const actualizarUsuario = async (req, resp = response) => {
     }
 }
 
-const eliminarUsuario =  async (req, resp = response) => {
+const eliminarUsuario = async (req, resp = response) => {
 
     const usuarioId = req.params.id;
 
     try {
-        
+
         const usuario = await Usuario.findById(usuarioId);
 
-        if(!usuario) {
+        if (!usuario) {
             resp.status(404).json({
                 ok: false,
                 msg: 'El id del Usuario no coincide con ningun elemento en la base de datos',
@@ -114,9 +115,9 @@ const loginUsuario = async (req, resp = response) => {
     try {
         console.log(cedula, password);
         /**Confirmar cedula */
-        let usuario = await Usuario.findOne({ cedula }); 
+        let usuario = await Usuario.findOne({ cedula });
         console.log(usuario);
-        if(!usuario) {
+        if (!usuario) {
             resp.status(400).json({
                 ok: true,
                 msg: 'Usuario o contraseña erradas'
@@ -127,7 +128,7 @@ const loginUsuario = async (req, resp = response) => {
 
         const validPassword = Usuario.findOne({ password });
 
-        if(!validPassword) {
+        if (!validPassword) {
             resp.status(400).json({
                 ok: true,
                 msg: 'Usuario o contraseña erradas'
@@ -140,13 +141,13 @@ const loginUsuario = async (req, resp = response) => {
             uid: usuario.id,
             name: usuario.name
         });
-        
+
     } catch (error) {
         resp.status(500).json({
             ok: false,
             msg: 'error al autenticar',
         });
-    }    
+    }
 }
 
 
@@ -163,11 +164,54 @@ const getCategorias = async (req, resp = response) => {
         console.log(error);
         resp.status(500).json({
             ok: false,
-            msg: 'error al crear el producto',
+            msg: 'error al encontrar el usuario',
         });
     }
 }
 
+const getEstados = async (req, resp = response) => {
+    try {
+
+        const estado = await Estado.find();
+        resp.status(200).json({
+            ok: true,
+            msg: 'Lista de categorias',
+            estado
+        });
+    } catch (error) {
+        console.log(error);
+        resp.status(500).json({
+            ok: false,
+            msg: 'error al encontrar la categoria',
+        });
+    }
+}
+
+const findById = async (req, resp = response) => {
+    try {
+        const usuarioId = req.params.id;
+        const usuario = await Usuario.findById(usuarioId).populate('roleeee', 'name');
+        if (!usuario) {
+            resp.status(400).json({
+                ok: false,
+                msg: 'Usuario no encontrado'
+            });
+        }
+
+        resp.status(200).json({
+            ok: true,
+            msg: 'Consulta Exitosa',
+            usuario
+        });
+
+    } catch (error) {
+        console.log(error);
+        resp.status(500).json({
+            ok: false,
+            msg: 'error al encontrar el usuario',
+        });
+    }
+}
 
 
 module.exports = {
@@ -176,5 +220,7 @@ module.exports = {
     actualizarUsuario,
     eliminarUsuario,
     loginUsuario,
-    getCategorias
+    getCategorias,
+    findById,
+    getEstados
 };

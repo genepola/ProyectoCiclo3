@@ -10,4 +10,4 @@ const rolSchema = Schema({
     collection: 'rol'
 });
 
-module.exports = model ('role', rolSchema);
+module.exports = model('role', rolSchema);
