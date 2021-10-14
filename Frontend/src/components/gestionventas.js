@@ -1,21 +1,39 @@
 import React from 'react'
+import Headergestventas from './Headergestventas';
+import Agregar from '../assets/img/Agregar.png';
+import Editar from '../assets/img/Editar.png';
+import Guardar from '../assets/img/Guardar.png';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 function gestionventas() {
     return (
 
         <div >
+            <Headergestventas />
             <div class="iconosVentas">
                 <ul>
                     <li>
-                        {/* <img src="Imagenes/Agregar.png" alt=""> */}
+
+                    <Link to="Ingresoventas"><img src={Agregar} alt=""/></Link>
                         <span>Nueva Venta</span>
+
+                        {/* <img src="Imagenes/Agregar.png" alt=""> */}
+                        {/* <div class="title"><span><Link to="Ingresoventas">Nueva venta</Link></span></div> */}
+
+                        {/* <img src="Imagenes/Agregar.png" alt=""> */}
+                        {/* <div class="title"><span><Link to="Ingresoventas">Nueva venta</Link></span></div> */}
                     </li>
                     <li>
-                        {/* <img src="Imagenes/Editar.png" alt=""> */}
+                    <Link to="Ingresoventas"><img src={Editar} alt=""/></Link>
                         <span>Editar Venta</span>
                     </li>
                     <li>
-                        {/* <img src="Imagenes/Guardar.png" alt=""> */}
+                    <img src={Guardar} alt=""/> 
                         <span>Guardar Venta</span>
                     </li>
                 </ul>

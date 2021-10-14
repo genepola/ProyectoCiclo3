@@ -14,14 +14,15 @@ const usuarioSchema = Schema({
         require: true,
         unique: true
     },
-    role:{
+    roles:{
         type: Schema.Types.ObjectId,
-        ref: 'rol',
+        ref: 'role',
         require: true
     },
-    estado: {
-        type: Boolean,
-        require: true 
+    estado:{
+        type: Schema.Types.ObjectId,
+        ref: 'status',
+        require: true
     }
 },);
 

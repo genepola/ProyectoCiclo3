@@ -1,14 +1,30 @@
 import React from 'react'
 import '../App.css'
+import Headergestproduct from './Headergestproduct';
+import Agregar from '../assets/img/Agregar.png';
+import Lapiz from '../assets/img/Lapis.png';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+  
 const Gestionproductos =() =>{
     return (
-        <div>
 
+        <div>
+            <Headergestproduct />
         <div class="iconosVentas">
         <ul>
             <li>
-                {/* <img src="Imagenes/Agregar.png" alt=""> */}
+            <Link to="Ingresoproductos"><img src={Agregar} alt=""/></Link>
                 <span>Nuevo Producto</span>
+                {/* <img src="Imagenes/Agregar.png" alt=""> */}
+                {/* <div class="title"><span><Link to="Ingresoproductos">Nuevo Producto</Link></span></div> */}
+                {/* <img src="Imagenes/Agregar.png" alt=""> */}
+                {/* <div class="title"><span><Link to="Ingresoproductos">Nuevo Producto</Link></span></div> */}
+
             </li>
         </ul>
             
@@ -35,7 +51,7 @@ const Gestionproductos =() =>{
                 <td>Dato</td>
                 <td>Dato</td>
                 <td>Dato</td>
-                <td>{/* <img src="Imagenes/Lapis.png" alt="Lapiz"id="img_lapiz"> */}</td>
+                <td><Link to="Ingresoproductos"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
 
             </tr>
             <tr>
@@ -43,7 +59,7 @@ const Gestionproductos =() =>{
                 <td>Dato</td>
                 <td>Dato</td>
                 <td>Dato</td>
-                <td>{/* <img src="Imagenes/Lapis.png" alt="Lapiz"id="img_lapiz"> */}</td>
+                <td><Link to="Ingresoproductos"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
                 
             </tr>
             <tr>
@@ -51,7 +67,7 @@ const Gestionproductos =() =>{
                 <td>Dato</td>
                 <td>Dato</td>
                 <td>Dato</td>
-                <td>{/* <img src="Imagenes/Lapis.png" alt="Lapiz"id="img_lapiz"> */}</td>
+                <td><Link to="Ingresoproductos"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
             </tr>
         </table>
     </div>
