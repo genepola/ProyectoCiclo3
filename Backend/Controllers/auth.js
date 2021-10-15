@@ -213,6 +213,13 @@ const findById = async (req, resp = response) => {
     }
 }
 
+const validarUsuarioGoogle = (req, resp = response)=>{
+    resp.json({
+        ok: true,
+        msg: 'Validar Usuario logueado con google'
+    });
+}
+
 
 module.exports = {
     crearUsuario,
@@ -222,5 +229,6 @@ module.exports = {
     loginUsuario,
     getCategorias,
     findById,
-    getEstados
+    getEstados,
+    validarUsuarioGoogle
 };
