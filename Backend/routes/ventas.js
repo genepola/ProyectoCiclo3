@@ -21,13 +21,19 @@ router.put(
     actualizarVenta
 );
 
-router.delete(
-    '/eliminar/:id', 
-    eliminarVenta
+//** Se debe realizar get por cada variable de búsqueda? */
+router.get(
+    '/findById/', 
+    findById
 );
 
 router.get(
-    '/findById/', 
+    '/findByIdCliente/', 
+    findById
+);
+
+router.get(
+    '/findByCliente/', 
     findById
 );
 

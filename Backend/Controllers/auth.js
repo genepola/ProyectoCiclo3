@@ -193,7 +193,7 @@ const findById = async (req, resp = response) => {
         const usuario = await Usuario.findById(usuarioId).populate('roleeee', 'name');
         if (!usuario) {
             resp.status(400).json({
-                ok: false,
+                ok: false,s
                 msg: 'Usuario no encontrado'
             });
         }
