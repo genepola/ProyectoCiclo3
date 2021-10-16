@@ -1,6 +1,8 @@
 const { Schema, model } = require('mongoose'); /**si o si se debe poner para la base de datos */
 
 const VentasSchema = Schema({
+    //*/
+
     IDVenta: {
         type: Number,
         require:true,
