@@ -1,20 +1,17 @@
 const { response } = require('express');
-const ventas = require('../models/venta');
+const ventas = require('../models/ventas');
 const  VentasModelo  = require('../models/ventas');
 
 
 const crearVenta = async (req, res = response) => {
-    const { IDVenta, IDCliente, Cliente, Fecha, Cantidad, ValorUnitario, Descripcion, Estado } = req.body;
+    const { IDCliente, Cliente, Fecha } = req.body;
     try {
-        let venta = await VentasModelo.findOne({ ID });        
-      
-        venta = new VentasModelo(req.body);
+        let venta = new VentasModelo(req.body);
         await venta.save(); /** para la base de datos */
    
     res.status(201).json({
         ok:true,
         msg:'exitoso',
-        IDVenta,
         IDCliente,
         Cliente,
         Fecha
@@ -28,8 +25,8 @@ const crearVenta = async (req, res = response) => {
     }
 }
 
-const getventas = async (req, resp = response) => {
-    const venta = await VentasModelo.find().populate('IDVenta','Fecha','Cliente','TotalVenta','EstadoVenta');
+const getVenta = async (req, resp = response) => {
+    const venta = await VentasModelo.find();
     resp.status(200).json({
         ok:true,
         msg: 'Lista de ventas',
@@ -71,21 +68,30 @@ const actualizarVenta = async (req, resp = response) => {
     }
 }
 
-
-const findById = async (req, resp = response) => {
+const find = async (req, resp = response) => {
     try {
-        const ventaId = req.params.id;
-        const venta = await venta.findById(ventaId).populate('IDVenta','Fecha','Cliente','TotalVenta','EstadoVenta');
-        if (!venta) {
-            resp.status(400).json({
-                ok: false,
-                msg: 'Venta no encontrado'
-            });
+        const id = req.header('x-id');
+/*         const productoId = {_id:id}
+        console.log(productoId); */
+        const cliente = {Cliente:req.header('x-Cliente')};
+        const idCliente = {IDCliente:req.header('x-IDCliente')};
+        console.log(cliente)
+        console.log(idCliente)
+        let venta="";
+        if(id &&id.length===24){
+            console.log("Entra al if");
+            venta = await VentasModelo.findById(id)
+        }else if (cliente){
+            console.log("Entra else if");
+            venta = await VentasModelo.findOne(cliente);
         }
-
+        else{
+            console.log("Entra else");
+            venta = await VentasModelo.findOne(idCliente);
+        }
         resp.status(200).json({
             ok: true,
-            msg: 'Consulta Exitosa',
+            msg: 'Venta Encontrada',
             venta
         });
 
@@ -93,10 +99,12 @@ const findById = async (req, resp = response) => {
         console.log(error);
         resp.status(500).json({
             ok: false,
-            msg: 'error al encontrar la venta',
+            msg: 'Producto al encontrar el usuario',
         });
     }
+
 }
+
 
 
 const getEstadosVentas = async (req, resp = response) => {
@@ -121,8 +129,8 @@ const getEstadosVentas = async (req, resp = response) => {
 
 module.exports={
     crearVenta,
-    getventas,
+    getVenta,
     actualizarVenta,
-    findById,
+    find,
     getEstadosVentas
 };

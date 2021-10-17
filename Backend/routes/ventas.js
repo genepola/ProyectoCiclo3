@@ -3,7 +3,7 @@ const { crearVenta,
      getVenta,
      actualizarVenta,
      eliminarVenta,
-     findById } = require('../Controllers/ventas');
+     find } = require('../Controllers/ventas');
 const router = Router();
 
 router.post(
@@ -23,11 +23,11 @@ router.put(
 
 //** Se debe realizar get por cada variable de búsqueda? */
 router.get(
-    '/findById/', 
-    findById
+    '/find/', 
+    find
 );
 
-router.get(
+/* router.get(
     '/findByIdCliente/', 
     findById
 );
@@ -35,7 +35,7 @@ router.get(
 router.get(
     '/findByCliente/', 
     findById
-);
+); */
 
 
 module.exports=router;

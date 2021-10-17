@@ -101,6 +101,37 @@ const eliminarProducto = async (req, resp = response) => {
     }
 }
 
+const findById = async (req, resp = response) => {
+    try {
+        const id = req.header('x-id');
+/*         const productoId = {_id:id}
+        console.log(productoId); */
+        const prueba = {Descripcion:req.header('x-Descripcion')};
+        console.log(prueba)
+        let producto="";
+        if(id &&id.length===24){
+            console.log("Entra al if");
+            producto = await ProductosModelo.findById(id)
+        }else{
+            console.log("Entra else");
+            producto = await ProductosModelo.findOne(prueba);
+        }
+        resp.status(200).json({
+            ok: true,
+            msg: 'Producto Exitosa',
+            producto
+        });
+
+    } catch (error) {
+        console.log(error);
+        resp.status(500).json({
+            ok: false,
+            msg: 'Producto al encontrar el usuario',
+        });
+    }
+
+}
+
 module.exports={
     crearProducto,
     getproductos,
@@ -109,5 +140,4 @@ module.exports={
     findById
 };
 
-/** Actualizar productos */
 

@@ -3,11 +3,6 @@ const { Schema, model } = require('mongoose'); /**si o si se debe poner para la 
 const VentasSchema = Schema({
     //*/
 
-    IDVenta: {
-        type: Number,
-        require:true,
-        unique:true
-    },
     IDCliente: {
         type: Number,
         require:true,
