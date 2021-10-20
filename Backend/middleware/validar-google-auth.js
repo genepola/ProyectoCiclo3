@@ -19,8 +19,24 @@ const validarGoogleAuth = (req, res = response, next)=>{
         token = token.slice(7, token.length);
     }
 
-    try{
-        console.log('token google', token);
+    try {
+        client.verifyIdToken({ idToken: token, audience: '846374279501-liat6l7avt6go3e3n38asktodbgefmh2.apps.googleusercontent.com' })
+            .then((response) => {
+
+                const { sub, name, email } = response.payload;
+
+                req.uid = sub;
+                req.name = name;
+                req.email = email;
+                next();
+            }).catch((err) => {
+                console.log(err);
+                return res.status(401).json({
+                    ok: false,
+                    msg: 'Token invalido'
+                });
+            });
+
     }catch(error){
         return res.status(401).json({
             ok: false,

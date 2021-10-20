@@ -7,21 +7,19 @@ import Background from '../assets/img/Fondo.png'
 
 function Login() {
 
-    const responseGoogle = (response) => {
-        console.log(process.env.React_API_URI);
-    
-        axios({
-            method: 'POST',
-            url: 'http://localhost:4500/proyecto/auth/google/login',
-            headers: {
-                'Authorization': `Bearer ${response.tokenId}`
-            }
-        })
-            .then((response) => {
-                console.log(response);
-            })
-            .catch(console.log);
-    
+    const responseGoogle = async(response) => {
+        try {
+            const { status, data } = await axios({
+                method: 'POST',
+                url: 'http://localhost:4500/proyecto/auth/google/login',
+                headers: {
+                    'Authorization': `Bearer ${response.tokenId}`
+                }
+            });
+            console.log('status', status);
+        } catch (error){
+            console.log(error);
+        }
     }
 
     return (

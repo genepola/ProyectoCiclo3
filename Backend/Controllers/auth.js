@@ -213,11 +213,36 @@ const findById = async (req, resp = response) => {
     }
 }
 
-const validarUsuarioGoogle = (req, resp = response)=>{
-    resp.json({
-        ok: true,
-        msg: 'Validar Usuario logueado con google'
-    });
+const validarUsuarioGoogle = async (req, resp = response)=>{
+    const { uid, name, email } = req;
+
+    try {
+        console.log(uid, name, email);
+        resp.status(200).json({
+            ok: true,
+            msg: 'Autentico correctamente'
+        });
+        /*let usuario = await Usuario.findOne({ email, idToken: uid});
+        console.log(usuario);
+        if(usuario){
+            console.log(usuario);
+        }else{
+            usuario = new Usuario({ name, email, password: uid, idToken:uid });
+            const newUser = await Usuario.save();
+            resp.status(201).json({
+                ok: true,
+                msg: 'Usuario creado de manera exitosa',
+                uid: usuario.uid,
+                name: usuario.name
+            })
+        }*/
+    } catch (error) {
+        resp.status(500).json({
+            ok: false,
+            msg: 'Error al autenticar'
+        });
+    }
+   
 }
 
 
