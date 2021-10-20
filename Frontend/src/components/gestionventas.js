@@ -42,8 +42,9 @@ function gestionventas() {
             <div class="filtro">
                 <span>Filtro</span>
                 <select class="redondo">
-                    <option value="">ID producto</option>
-                    <option value="">Descripcion</option>
+                    <option value="">ID venta</option>
+                    <option value="">ID Cliente</option>
+                    <option value="">Nombre Cliente</option>
                 </select>
                 <input type="text" class="redondo" />
             </div>
