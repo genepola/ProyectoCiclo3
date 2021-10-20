@@ -14,6 +14,19 @@
             <input class="botones" type="submit" name="" value="Ingresar">
             <p><a href="#">Ingresar con Google</a></p>
             
+            const responseGoogle = (resp) =>{
+                console.log(resp);
+                
+            }
+
+            <GoogleLogin
+                classname = "Ingresar"
+                clientId="513614895581-efcs9sriiinuo9v1ses66keutkctn7o5.apps.googleusercontent.com"
+                buttonText="iniciar sesion con Google"
+                onSuccess={responseGoogle}
+                onFailure={responseGoogle}
+                cookiePolicy={'single_host_origin'}
+            />,
         </section>
            
     </body>
