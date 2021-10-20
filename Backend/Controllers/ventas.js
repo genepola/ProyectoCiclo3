@@ -1,20 +1,16 @@
 const { response } = require('express');
-const ventas = require('../models/ventas');
-const  VentasModelo  = require('../models/ventas');
+const VentasModelo = require('../models/ventas');
 
 
 const crearVenta = async (req, res = response) => {
-    const { IDCliente, Cliente, Fecha } = req.body;
+    //const { IDCliente, Cliente, Fecha } = req.body;
     try {
         let venta = new VentasModelo(req.body);
         await venta.save(); /** para la base de datos */
    
     res.status(201).json({
         ok:true,
-        msg:'exitoso',
-        IDCliente,
-        Cliente,
-        Fecha
+        msg:'exitoso'
     });
     } catch(error){
         console.log(error);

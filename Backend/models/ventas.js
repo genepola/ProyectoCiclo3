@@ -1,9 +1,8 @@
 const { Schema, model } = require('mongoose'); /**si o si se debe poner para la base de datos */
 
 const VentasSchema = Schema({
-    //*/
 
-    IDCliente: {
+    Cedula: {
         type: Number,
         require:true,
     },
@@ -28,8 +27,7 @@ const VentasSchema = Schema({
         require: true
     },
     EstadoVenta: {
-        type: Schema.Types.ObjectId,
-        ref: 'status',
+        type: String,
         require: true
     },
 },);
