@@ -6,7 +6,6 @@ import axios from 'axios'
 import Background from '../assets/img/Fondo.png'
 
 function Login() {
-
     const responseGoogle = (response) => {
         console.log(process.env.React_API_URI);
     
@@ -23,7 +22,6 @@ function Login() {
             .catch(console.log);
     
     }
-function Login() {
     return (
         <div>
                 <body>
