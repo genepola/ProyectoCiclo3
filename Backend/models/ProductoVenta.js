@@ -12,7 +12,7 @@ const ProductoVentaSchema = Schema({
 
 },
     {
-        collection: 'productosmodelo'
+        collection: 'productoventas'
     });
 
 module.exports = model('ProductoVenta', ProductoVentaSchema); /**esto lo exporta */

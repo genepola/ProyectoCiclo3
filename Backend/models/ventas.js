@@ -22,13 +22,14 @@ const VentasSchema = Schema({
         type: Number,
         require: true
     },
-    Producto: {
-        type:String,
+    Productos: {
+        type: Schema.Types.ObjectId,
+        ref: 'ProductosModelo',
         require: true
     },
     EstadoVenta: {
         type: Schema.Types.ObjectId,
-        ref: 'Estado',
+        ref: 'estadoVenta',
         require: true
     },
 },);

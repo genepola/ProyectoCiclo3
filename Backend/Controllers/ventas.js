@@ -11,8 +11,10 @@ const crearVenta = async (req, res = response) => {
         
         /* let ProductoVenta = new  */
         await venta.save(); /** para la base de dato*/
-        console.log(venta.id)
-        //const jsonProductoVenta= {IdVenta:venta.id,IdProducto: venta.};
+        const jsonProductoVenta= {IdVenta:venta.id,IdProducto: venta.Descripcion};
+        let ventaProducto = new ProductoVenta(jsonProductoVenta);
+        await ventaProducto.save();
+
         res.status(201).json({
             ok: true,
             msg: 'exitoso',
@@ -29,7 +31,7 @@ const crearVenta = async (req, res = response) => {
 
 //* Listar todos
 const getVenta = async (req, resp = response) => {
-    const venta = await VentasModelo.find().populate('EstadoVenta','Estado');
+    const venta = await VentasModelo.find().populate('EstadoVenta','estado').populate('Productos', ['Descripcion', 'ValorUnitario']);
     resp.status(200).json({
         ok: true,
         msg: 'Lista de ventas',
@@ -82,11 +84,11 @@ const find = async (req, resp = response) => {
         console.log(cliente);
         let venta = '';
         if (idVenta && idVenta.length === 24) {
-            venta = await VentasModelo.findById(idVenta).populate('EstadoVenta','Estado');
+            venta = await VentasModelo.findById(idVenta).populate('estadoVenta','estado');
         } else if (cedula && cedula.length > 0) {
-            venta = await VentasModelo.find({ Cedula: cedula }).populate('EstadoVenta','Estado');
+            venta = await VentasModelo.find({ Cedula: cedula }).populate('estadoVenta','estado');
         } else if(cliente && cliente.length>0){
-            venta = await VentasModelo.find({Cliente:cliente}).populate('EstadoVenta','Estado');
+            venta = await VentasModelo.find({Cliente:cliente}).populate('estadoVenta','estado');
         } 
         if (venta.length <= 0 || !venta ) {
             return resp.status(401).json({
