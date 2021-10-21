@@ -1,12 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import '../App.css'
 import Agregar from '../assets/img/Agregar.png';
 import Headergestusuarios from './Headergestusuarios';
 import Lapiz from '../assets/img/Lapis.png';
+import axios from 'axios'
 
 import { Link } from "react-router-dom";
 
 const Gestionusuarios =() =>  {
+
+    const listarUsuario = async (response) => {
+        try {
+            const { status } = await axios({
+                method: 'POST',
+                url: 'http://localhost:4500/proyecto/auth/listar',
+                headers: {
+                    'Authorization': `Bearer ${response.tokenId}`
+                }
+            });
+            console.log('status', status);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        listarUsuario();
+    }, []);
     return (
         <div>
               <Headergestusuarios />  
@@ -63,6 +83,7 @@ const Gestionusuarios =() =>  {
                 <td><Link to="Ingresousuarios"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
             </tr>
         </table>
+        <button onClick={Gestionusuarios}>HOLA TODOS</button>
     </div>
         </div>
     )
