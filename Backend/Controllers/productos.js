@@ -104,12 +104,14 @@ const eliminarProducto = async (req, resp = response) => {
 const findById = async (req, resp = response) => {
     try {
         const id = req.header('x-id');
-        const productoId = {_id:id}
+/*         const productoId = {_id:id}
+        console.log(productoId); */
         const prueba = {Descripcion:req.header('x-Descripcion')};
+        console.log(prueba)
         let producto="";
         if(id &&id.length===24){
             console.log("Entra al if");
-            producto = await ProductosModelo.findById(productoId)
+            producto = await ProductosModelo.findById(id)
         }else{
             console.log("Entra else");
             producto = await ProductosModelo.findOne(prueba);
@@ -129,6 +131,7 @@ const findById = async (req, resp = response) => {
     }
 
 }
+
 module.exports={
     crearProducto,
     getproductos,
@@ -137,5 +140,4 @@ module.exports={
     findById
 };
 
-/** Actualizar productos */
 

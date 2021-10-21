@@ -1,22 +1,36 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import '../App.css'
-import Editar from '../assets/img/Editar.png';
 import Agregar from '../assets/img/Agregar.png';
 import Headergestusuarios from './Headergestusuarios';
 import Lapiz from '../assets/img/Lapis.png';
+import axios from 'axios'
 
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Gestionusuarios =() =>  {
+
+    const listarUsuario = async (response) => {
+        try {
+            const { status } = await axios({
+                method: 'POST',
+                url: 'http://localhost:4500/proyecto/auth/listar',
+                headers: {
+                    'Authorization': `Bearer ${response.tokenId}`
+                }
+            });
+            console.log('status', status);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        listarUsuario();
+    }, []);
     return (
         <div>
               <Headergestusuarios />  
-                <div class="iconosVentas">
+                <div className="iconosVentas">
         <ul>
             <li>
 
@@ -24,20 +38,20 @@ const Gestionusuarios =() =>  {
                 <span>Nuevo Usuario</span>
 
                 {/* <img src="Imagenes/Agregar.png" alt=""> */}
-               {/*  <div class="title"><span><Link to="Ingresousuarios">Nuevo Usuario</Link></span></div> */}
+               {/*  <div className="title"><span><Link to="Ingresousuarios">Nuevo Usuario</Link></span></div> */}
 
                 {/* <img src="Imagenes/Agregar.png" alt=""> */}
-              {/*   <div class="title"><span><Link to="Ingresousuarios">Nuevo Usuario</Link></span></div> */}
+              {/*   <div className="title"><span><Link to="Ingresousuarios">Nuevo Usuario</Link></span></div> */}
             </li>
             
         </ul>
             
     </div>
-    <div class="filtro">
+    <div className="filtro">
         <span>Buscar</span>
-            <input type="text" class="redondo"/>
+            <input type="text" className="redondo"/>
     </div>
-    <div class="divTabla">
+    <div className="divTabla">
         <table>
             <tr>
                 <th>Id Usuario</th>
@@ -69,6 +83,7 @@ const Gestionusuarios =() =>  {
                 <td><Link to="Ingresousuarios"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
             </tr>
         </table>
+        <button onClick={Gestionusuarios}>HOLA TODOS</button>
     </div>
         </div>
     )

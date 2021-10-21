@@ -5,21 +5,21 @@ const Ingresousuarios = () => {
     return (
         <div>
             <Headeringresousu/> 
-            <div class="divTabla">
+            <div className="divTabla">
                 <table id="tablaIngresoDatos">
                     <tr>
                         <td><h5>ID</h5></td>
-                        <td class="Izquierda"><input type="text" size="70" maxlength="60" name="ID" /></td>
+                        <td className="Izquierda"><input type="text" size="70" maxlength="60" name="ID" /></td>
                     </tr>
 
                     <tr>
                         <td><h5>Nombre</h5></td>
-                        <td class="Izquierda"><input type="text" size="70" maxlength="60" name="Nombre" /></td>
+                        <td className="Izquierda"><input type="text" size="70" maxlength="60" name="Nombre" /></td>
                     </tr>
 
                     <tr>
                         <td><h5>Roles de usuario</h5></td>
-                        <td class="Izquierda"><select name="SeleccionRol">
+                        <td className="Izquierda"><select name="SeleccionRol">
 
                             <option>Administrador</option>
 
@@ -30,7 +30,7 @@ const Ingresousuarios = () => {
 
                     <tr>
                         <td><h5>Estado del usuario</h5></td>
-                        <td class="Izquierda">
+                        <td className="Izquierda">
                             <select name="SeleccionRol">
 
                                 <option>Pendiente</option>
@@ -47,7 +47,7 @@ const Ingresousuarios = () => {
 
                 <div align="center">
                     <h5>
-                        <button class="Guardar">
+                        <button className="Guardar">
                             Guardar
                         </button>
                     </h5>

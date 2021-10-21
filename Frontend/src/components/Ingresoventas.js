@@ -3,10 +3,11 @@ import '../App.css'
 import Headeringresoventas from './Headeringresoventas';
 import Agregar from '../assets/img/Agregar.png';
 import Quitar from  '../assets/img/Quitar.png';
-const Ingresoventas = () => {
+
+const Ingresoventas = (props) => {
     return (
         <div>
-            <Headeringresoventas/> 
+            <Headeringresoventas id={props.match.params.id}/> 
             <div class="divFiltros">
                 <ul>
                     <li>Fecha de venta <input type="date" name="fechaVenta" /></li>

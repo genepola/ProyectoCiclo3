@@ -3,8 +3,8 @@ const { Schema, model } = require('mongoose'); /**si o si se debe poner para la 
 const ProductosSchema = Schema({
     ID: {
         type: Number,
-        require:true,
-        unique:true
+        require: true,
+        unique: true
     },
     Descripcion: {
         type: String,
@@ -17,7 +17,10 @@ const ProductosSchema = Schema({
     Estado: {
         type: String,
         require: true
-    }
-},);
+    },
+},
+    {
+        collection: 'productosmodelos'
+    });
 
 module.exports = model('ProductosModelo', ProductosSchema); /**esto lo exporta */
