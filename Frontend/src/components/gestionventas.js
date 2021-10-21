@@ -3,33 +3,28 @@ import Headergestventas from './Headergestventas';
 import Agregar from '../assets/img/Agregar.png';
 import Editar from '../assets/img/Editar.png';
 import Guardar from '../assets/img/Guardar.png';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function gestionventas() {
     return (
 
         <div >
             <Headergestventas />
-            <div class="iconosVentas">
+            <div className="iconosVentas">
                 <ul>
                     <li>
 
-                    <Link to="Ingresoventas"><img src={Agregar} alt=""/></Link>
+                    <Link to="Ingresoventas/new"><img src={Agregar} alt=""/></Link>
                         <span>Nueva Venta</span>
 
                         {/* <img src="Imagenes/Agregar.png" alt=""> */}
-                        {/* <div class="title"><span><Link to="Ingresoventas">Nueva venta</Link></span></div> */}
+                        {/* <div className="title"><span><Link to="Ingresoventas">Nueva venta</Link></span></div> */}
 
                         {/* <img src="Imagenes/Agregar.png" alt=""> */}
-                        {/* <div class="title"><span><Link to="Ingresoventas">Nueva venta</Link></span></div> */}
+                        {/* <div className="title"><span><Link to="Ingresoventas">Nueva venta</Link></span></div> */}
                     </li>
                     <li>
-                    <Link to="Ingresoventas"><img src={Editar} alt=""/></Link>
+                    <Link to="Ingresoventas/edit"><img src={Editar} alt=""/></Link>
                         <span>Editar Venta</span>
                     </li>
                     <li>
@@ -39,15 +34,16 @@ function gestionventas() {
                 </ul>
 
             </div>
-            <div class="filtro">
+            <div className="filtro">
                 <span>Filtro</span>
-                <select class="redondo">
-                    <option value="">ID producto</option>
-                    <option value="">Descripcion</option>
+                <select className="redondo">
+                    <option value="">ID venta</option>
+                    <option value="">ID Cliente</option>
+                    <option value="">Nombre Cliente</option>
                 </select>
-                <input type="text" class="redondo" />
+                <input type="text" className="redondo" />
             </div>
-            <div class="divTabla">
+            <div className="divTabla">
                 <table>
                     <tr>
                         <th>Id Venta</th>

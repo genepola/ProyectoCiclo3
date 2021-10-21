@@ -3,12 +3,7 @@ import '../App.css'
 import Headergestproduct from './Headergestproduct';
 import Agregar from '../assets/img/Agregar.png';
 import Lapiz from '../assets/img/Lapis.png';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+import { Link } from "react-router-dom";
   
 const Gestionproductos =() =>{
     return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Gestionusuarios from './components/Gestionusuarios';
 import Gestionventas from "./components/gestionventas";
 import Gestionproductos from "./components/Gestionproductos";
@@ -12,7 +12,7 @@ const Main=() =>{
     return (
         <main>
             <Switch>
-                <Route exact path="/gestionventas" component={Gestionventas} />
+                <Route exact path="/Gestionventas" component={Gestionventas} />
             </Switch>
 
             <Switch>
@@ -28,7 +28,7 @@ const Main=() =>{
             </Switch>
 
             <Switch>
-                <Route exact path="/Ingresoventas" component={Ingresoventas} />
+                <Route  exact path="/Ingresoventas/:id" component={Ingresoventas} />
             </Switch>
 
             <Switch>
