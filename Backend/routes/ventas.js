@@ -3,6 +3,8 @@ const { crearVenta,
      getVenta,
      actualizarVenta,
      eliminarVenta,
+     getEstadosVentas,
+     getproductosVenta,
      find } = require('../Controllers/ventas');
 const router = Router();
 
@@ -27,15 +29,14 @@ router.get(
     find
 );
 
-/* router.get(
-    '/findByIdCliente/', 
-    findById
+router.get(
+    '/estadoVenta/', 
+    getEstadosVentas
 );
 
 router.get(
-    '/findByCliente/', 
-    findById
-); */
-
+    '/productoventa/', 
+    getproductosVenta
+);
 
 module.exports=router;
