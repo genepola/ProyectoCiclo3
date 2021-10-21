@@ -4,6 +4,7 @@ const { crearVenta,
      actualizarVenta,
      eliminarVenta,
      getEstadosVentas,
+     getproductosVenta,
      find } = require('../Controllers/ventas');
 const router = Router();
 
@@ -33,5 +34,9 @@ router.get(
     getEstadosVentas
 );
 
+router.get(
+    '/productoventa/', 
+    getproductosVenta
+);
 
 module.exports=router;

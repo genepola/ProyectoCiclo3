@@ -22,8 +22,8 @@ const VentasSchema = Schema({
         type: Number,
         require: true
     },
-    Descripcion: {
-        type: String,
+    Producto: {
+        type:String,
         require: true
     },
     EstadoVenta: {

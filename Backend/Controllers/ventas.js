@@ -8,7 +8,11 @@ const crearVenta = async (req, res = response) => {
     //const { IDCliente, Cliente, Fecha } = req.body;
     try {
         let venta = new VentasModelo(req.body);
+        
+        /* let ProductoVenta = new  */
         await venta.save(); /** para la base de dato*/
+        console.log(venta.id)
+        //const jsonProductoVenta= {IdVenta:venta.id,IdProducto: venta.};
         res.status(201).json({
             ok: true,
             msg: 'exitoso',
@@ -127,11 +131,29 @@ const getEstadosVentas = async (req, resp = response) => {
 }
 
 
+const getproductosVenta = async (req, resp = response) => {
+    try {
+
+        const productoVenta = await ProductoVenta.find();
+        resp.status(200).json({
+            ok: true,
+            msg: 'Lista de estado de la venta',
+            productoVenta
+        });
+    } catch (error) {
+        console.log(error);
+        resp.status(500).json({
+            ok: false,
+            msg: 'error al encontrar el estado de la venta',
+        });
+    }
+}  
 
 module.exports = {
     crearVenta,
     getVenta,
     actualizarVenta,
     find,
-    getEstadosVentas
+    getEstadosVentas,
+    getproductosVenta
 };
