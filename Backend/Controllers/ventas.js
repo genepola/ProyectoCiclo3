@@ -25,7 +25,7 @@ const crearVenta = async (req, res = response) => {
 
 //* Listar todos
 const getVenta = async (req, resp = response) => {
-    const venta = await VentasModelo.find().populate('EstadoVenta','status');
+    const venta = await VentasModelo.find().populate('EstadoVenta','Estado');
     resp.status(200).json({
         ok: true,
         msg: 'Lista de ventas',
@@ -78,11 +78,11 @@ const find = async (req, resp = response) => {
         console.log(cliente);
         let venta = '';
         if (idVenta && idVenta.length === 24) {
-            venta = await VentasModelo.findById(idVenta).populate('EstadoVenta','status');
+            venta = await VentasModelo.findById(idVenta).populate('EstadoVenta','Estado');
         } else if (cedula && cedula.length > 0) {
-            venta = await VentasModelo.find({ Cedula: cedula }).populate('EstadoVenta','status');
+            venta = await VentasModelo.find({ Cedula: cedula }).populate('EstadoVenta','Estado');
         } else if(cliente && cliente.length>0){
-            venta = await VentasModelo.find({Cliente:cliente}).populate('EstadoVenta','status');
+            venta = await VentasModelo.find({Cliente:cliente}).populate('EstadoVenta','Estado');
         } 
         if (venta.length <= 0 || !venta ) {
             return resp.status(401).json({

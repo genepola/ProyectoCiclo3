@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 const estadoVentaSchema = Schema({
-    name:{
+    Estado:{
         type: String,
         require: true
     }
@@ -10,4 +10,4 @@ const estadoVentaSchema = Schema({
     collection: 'EstadoVenta'
 });
 
-module.exports = model('estadoVenta', estadoVentaSchema);
+module.exports = model('Estado', estadoVentaSchema);
