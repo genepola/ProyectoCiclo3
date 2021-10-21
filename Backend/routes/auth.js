@@ -6,7 +6,10 @@ const { crearUsuario,
      loginUsuario,
      getCategorias,
      findById,
-     getEstados } = require('../Controllers/auth');
+     getEstados,
+     validarUsuarioGoogle } = require('../Controllers/auth');
+
+const { validarGoogleAuth } = require('../middleware/validar-google-auth');
 const router = Router();
 
 router.post(
@@ -48,4 +51,6 @@ router.get(
     '/findById/:id', 
     findById
 );
+
+router.post('/google/login', validarGoogleAuth, validarUsuarioGoogle)
 module.exports=router;
