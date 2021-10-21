@@ -2,12 +2,7 @@ import React from 'react'
 import Agregar from '../assets/img/Agregar.png';
 import Logo from '../assets/img/logo_col_tech.png';
 import '../App.css';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function menu() {
@@ -26,36 +21,36 @@ function menu() {
                 <div id="name"><span>Perfil</span></div>
             </div>
             <div id="menu-items">
-                <div class="item">
+                <div className="item">
                     <a href={() => false}>
                     
-                        <div class="icon"><img src={Agregar} alt=""/></div>
-                        {/* <div class="title"><span>Gestión de usuarios</span></div> */}
-                        <div class="title"><span><Link to="Gestionusuarios">Gestión usuarios</Link></span></div>
+                        <div className="icon"><img src={Agregar} alt=""/></div>
+                        {/* <div className="title"><span>Gestión de usuarios</span></div> */}
+                        <div className="title"><span><Link to="Gestionusuarios">Gestión usuarios</Link></span></div>
                     </a>
                 </div> 
-                <div class="item separator">
+                <div className="item separator">
                 
                 </div>
-                <div class="item">
+                <div className="item">
                     <a href={() => false}>
                     
-                        <div class="icon"><img src={Agregar} alt=""/></div>
-                        {/* <div class="title"><span>Gestión de productos</span></div> */} 
-                        <div class="title"><span><Link to="Gestionproductos">Gestión productos</Link></span></div>
+                        <div className="icon"><img src={Agregar} alt=""/></div>
+                        {/* <div className="title"><span>Gestión de productos</span></div> */} 
+                        <div className="title"><span><Link to="Gestionproductos">Gestión productos</Link></span></div>
 
                     </a>
                 </div> 
-                <div class="item separator">
+                <div className="item separator">
                 
                 </div>
-                <div class="item">
+                <div className="item">
                     <a href={() => false}>
-                        <div class="icon"><img src={Agregar} alt=""/></div>
-                        <div class="title"><span><Link to="Gestionventas">Gestión ventas</Link></span></div>
+                        <div className="icon"><img src={Agregar} alt=""/></div>
+                        <div className="title"><span><Link to="Gestionventas">Gestión ventas</Link></span></div>
                     </a>
                 </div> 
-                <div class="item separator">
+                <div className="item separator">
                 
                 </div>
             </div>

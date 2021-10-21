@@ -1,4 +1,5 @@
 const { response } = require('express');
+const ProductoVenta = require('../models/ProductoVenta');
 const VentasModelo = require('../models/ventas');
 
 
@@ -7,10 +8,11 @@ const crearVenta = async (req, res = response) => {
     try {
         let venta = new VentasModelo(req.body);
         await venta.save(); /** para la base de datos */
-   
+        let productoVenta = ProductoVenta.save();
     res.status(201).json({
         ok:true,
-        msg:'exitoso'
+        msg:'exitoso',
+        venta
     });
     } catch(error){
         console.log(error);
@@ -66,24 +68,14 @@ const actualizarVenta = async (req, resp = response) => {
 
 const find = async (req, resp = response) => {
     try {
-        const id = req.header('x-id');
-/*         const productoId = {_id:id}
-        console.log(productoId); */
-        const cliente = {Cliente:req.header('x-Cliente')};
-        const idCliente = {IDCliente:req.header('x-IDCliente')};
-        console.log(cliente)
-        console.log(idCliente)
-        let venta="";
-        if(id &&id.length===24){
-            console.log("Entra al if");
-            venta = await VentasModelo.findById(id)
-        }else if (cliente){
-            console.log("Entra else if");
-            venta = await VentasModelo.findOne(cliente);
-        }
-        else{
-            console.log("Entra else");
-            venta = await VentasModelo.findOne(idCliente);
+        const cedula = req.header('x-Cedula');
+        console.log(cedula);
+        let venta = await VentasModelo.find({Cedula:cedula});
+        if(venta.length<=0){
+            return resp.status(401).json({
+                ok: false,
+                msg: 'Venta No existe',
+            });
         }
         resp.status(200).json({
             ok: true,
