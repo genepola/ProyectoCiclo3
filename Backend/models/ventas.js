@@ -27,7 +27,8 @@ const VentasSchema = Schema({
         require: true
     },
     EstadoVenta: {
-        type: String,
+        type: Schema.Types.ObjectId,
+        ref: 'status',
         require: true
     },
 },);
