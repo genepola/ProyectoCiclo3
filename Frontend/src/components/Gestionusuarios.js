@@ -1,32 +1,39 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../App.css'
 import Agregar from '../assets/img/Agregar.png';
 import Headergestusuarios from './Headergestusuarios';
+import useAuth from '../hooks/userAuth';
 import Lapiz from '../assets/img/Lapis.png';
-import axios from 'axios'
-
 import { Link } from "react-router-dom";
+import axios from 'axios'
 
 const Gestionusuarios =() =>  {
 
-    const listarUsuario = async (response) => {
+    const auth = useAuth();
+
+    const [usuarios, setUsuarios] = useState([]);
+
+    const responseGoogle = async (response) => {
         try {
-            const { status } = await axios({
-                method: 'POST',
+            const { status, data } = await axios({
+                method: 'GET',
                 url: 'http://localhost:4500/proyecto/auth/listar',
                 headers: {
-                    'Authorization': `Bearer ${response.tokenId}`
+                    'Authorization': `Bearer ${auth}`
                 }
             });
-            console.log('status', status);
+           
+            setUsuarios(data.usuarios);
+            console.log(usuarios);
         } catch (error) {
             console.log(error);
         }
     }
 
-    useEffect(() => {
-        listarUsuario();
+    useEffect(()=>{
+        responseGoogle();
     }, []);
+
     return (
         <div>
               <Headergestusuarios />  
@@ -54,36 +61,24 @@ const Gestionusuarios =() =>  {
     <div className="divTabla">
         <table>
             <tr>
-                <th>Id Usuario</th>
+                <th>Cedula</th>
                 <th>Nombre</th>
                 <th>Rol</th>
                 <th>Estado</th>
                 <th>Acción</th>
             </tr>
-            <tr>
-                <td>Dato</td>
-                <td>Dato</td>
-                <td>Dato</td>
-                <td>Dato</td>
-                <td><Link to="Ingresousuarios"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
-            </tr>
-            <tr>
-                <td>Dato</td>
-                <td>Dato</td>
-                <td>Dato</td>
-                <td>Dato</td>
-                <td><Link to="Ingresousuarios"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
-                
-            </tr>
-            <tr>
-                <td>Dato</td>
-                <td>Dato</td>
-                <td>Dato</td>
-                <td>Dato</td>
-                <td><Link to="Ingresousuarios"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
-            </tr>
+                {
+                    usuarios.map((usuarios, index)=>(
+                        <tr key={usuarios._id}>
+                             <td>{usuarios.cedula}</td>
+                            <td>{usuarios.name}</td>
+                            <td>{usuarios.roles.name}</td>
+                            <td>{usuarios.estado.status}</td>
+
+                        </tr>
+                    ))
+                }
         </table>
-        <button onClick={Gestionusuarios}>HOLA TODOS</button>
     </div>
         </div>
     )

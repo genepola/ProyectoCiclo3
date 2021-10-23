@@ -1,15 +1,13 @@
 import React from 'react';
-import Menu from './components/menu';
 import './App.css';
-import Main from './Main';
+import { AppRouter } from './routers/AppRouter';
 
 
 function App() {
   return (
     <div>
-        <Menu />
-        <Main />
-      </div>
+      <AppRouter />
+    </div>
   )
 }
 
