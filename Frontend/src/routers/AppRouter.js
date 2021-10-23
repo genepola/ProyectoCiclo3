@@ -9,7 +9,7 @@ export const AppRouter = () => {
             <div>
                 <Switch>
                     <Route exact path="/Login" component={Login} />
-                    <Route path="/" component={MenuRouter} />
+                    <Route path="/ " component={MenuRouter} />
                     {/* <Redirect to = "/Login" /> */}
                 </Switch>
             </div>
