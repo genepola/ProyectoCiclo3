@@ -2,12 +2,15 @@ import React from 'react'
 import Logo from '../assets/img/logo_col_tech.png'
 import GoogleLogin from 'react-google-login';
 import axios from 'axios'
+import useAuth from '../hooks/useAuth';
+import notie from 'notie';
 
-function Login() {
+const Login = () =>{
+    const auth = useAuth();
 
     const responseGoogle = async (response) => {
         try {
-            const { status } = await axios({
+            const { status, data } = await axios({
                 method: 'POST',
                 url: 'http://localhost:4500/proyecto/auth/google/login',
                 headers: {
@@ -15,8 +18,19 @@ function Login() {
                 }
             });
             console.log('status', status);
+            if(status===200){
+                auth.setToken(data.token);
+                auth.setUser({ uid: data.uid, name: data.name });
+            }else if(status === 201){
+                notie.alert({ text: data.msg, type: 'success', time: 10 });
+            }
         } catch (error) {
             console.log(error);
+            /*if (error.response.status === 401) {
+                notie.alert({ text: error.response.data.msg, type: 'warning', time: 10 });
+            } else {
+                notie.alert({ text: error.response.data.msg, type: 'error', time: 10 });
+            }*/
         }
     }
 

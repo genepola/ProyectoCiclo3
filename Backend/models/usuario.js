@@ -14,6 +14,10 @@ const usuarioSchema = Schema({
         require: true,
         unique: true
     },
+    email:{
+        type:String,
+        require: true
+    },
     roles:{
         type: Schema.Types.ObjectId,
         ref: 'role',
@@ -23,6 +27,9 @@ const usuarioSchema = Schema({
         type: Schema.Types.ObjectId,
         ref: 'status',
         require: true
+    },
+    idToken:{
+        type: String
     }
 },);
 

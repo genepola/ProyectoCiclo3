@@ -1,5 +1,5 @@
 import React from 'react'
-import Menu from '../components/menu'
+import Menu from '../components/Menu'
 import { Switch, Route , Redirect} from "react-router-dom";
 import gestionventas from '../components/gestionventas';
 import Gestionusuarios from '../components/Gestionusuarios';

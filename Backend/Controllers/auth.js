@@ -219,12 +219,18 @@ const findById = async (req, resp = response) => {
 
 const validarUsuarioGoogle = async (req, resp = response)=>{
     const { uid, name, email } = req;
-
+    let usuario = await Usuario.findOne({email})
+    console.log("Entra acá usuario ",usuario);
+    const token = await generarJWT(usuario)
+    console.log("Entra acá token",token);
     try {
         console.log(uid, name, email);
         resp.status(200).json({
             ok: true,
-            msg: 'Autentico correctamente'
+            msg: 'Autentico correctamente',
+            uid: usuario.id,
+            name: usuario.name,
+            token
         });
         /*let usuario = await Usuario.findOne({ email, idToken: uid});
         console.log(usuario);

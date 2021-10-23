@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../App.css'
 import Agregar from '../assets/img/Agregar.png';
 import Headergestusuarios from './Headergestusuarios';
-import useAuth from '../hooks/userAuth';
+import useAuth from '../hooks/useAuth';
 import Lapiz from '../assets/img/Lapis.png';
 import { Link } from "react-router-dom";
 import axios from 'axios'
