@@ -7,7 +7,7 @@ const client =new OAuth2Client('846374279501-liat6l7avt6go3e3n38asktodbgefmh2.ap
 const validarGoogleAuth = (req, res = response, next)=>{
     let token='';
     token = req.headers['x-access-token'] || req.headers['authorization'];
-    console.log(token);
+    console.log("Primera vez ", token);
     if(!token){
         return res.status(401).json({
             ok: false,

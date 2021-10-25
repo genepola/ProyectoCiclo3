@@ -1,11 +1,46 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import Headergestventas from './Headergestventas';
 import Agregar from '../assets/img/Agregar.png';
 import Editar from '../assets/img/Editar.png';
 import Guardar from '../assets/img/Guardar.png';
 import { Link } from "react-router-dom";
+import useAuth from '../hooks/useAuth';
+import notie from 'notie';
+import 'notie/dist/notie.css';
+import { listarVentas } from '../Services/Ventas.service';
 
-function gestionventas() {
+function Gestionventas() {
+
+    const auth = useAuth();
+    const [venta, setVentas] = useState([]);
+
+    const getVentas = async () => {
+        try {
+            const { data } = await listarVentas(auth.token);
+            setVentas(data.venta);
+            console.log(venta);
+
+        } catch ({response: error}) {
+
+            console.log(error);
+            if(error.status === 401) {
+                setTimeout(() => {
+                    auth.logout();
+                }, 3000);
+                notie.alert({ text: error.data.msg, type: 'warning', time: 3 });
+            } else {
+                notie.alert({ text: error.data.msg, type: 'error', time: 3 });
+            }
+            
+
+        }
+    }
+
+    useEffect(()=>{
+        getVentas();
+    },[])
+
+
     return (
 
         <div >
@@ -47,44 +82,27 @@ function gestionventas() {
                 <table>
                     <tr>
                         <th>Id Venta</th>
-                        <th> Fecha de venta</th>
                         <th>Cliente</th>
+                        <th>Fecha de venta</th>
                         <th>Total Venta</th>
+                        <th>Descripcion prodcuto</th>
+                        <th>Valor prodcuto</th>
                         <th>Estado</th>
                     </tr>
-                    <tr>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td><select>
-                            <option>Estado 1</option>
-                            <option>Estado 2</option>
-                            <option>Estado 3</option>
-                        </select></td>
-                    </tr>
-                    <tr>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td><select>
-                            <option>Estado 1</option>
-                            <option>Estado 2</option>
-                            <option>Estado 3</option>
-                        </select></td>
-                    </tr>
-                    <tr>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td>Dato</td>
-                        <td><select>
-                            <option>Estado 1</option>
-                            <option>Estado 2</option>
-                            <option>Estado 3</option>
-                        </select></td>
-                    </tr>
+                    {
+                        venta.map((ventas, index)=>(
+                            <tr key={ventas._id}>
+                            <td>{ventas.Cedula}</td>
+                            <td>{ventas.Cliente}</td>
+                            <td>{ventas.Fecha}</td>
+                            <td>{ventas.Cantidad}</td>
+                            <td>{ventas.Productos.Descripcion}</td>
+                            <td>{ventas.Productos.ValorUnitario}</td>
+                            <td>{ventas.EstadoVenta.estado}</td>
+
+                        </tr>
+                        ))
+                    }
                 </table>
             </div>
         </div>
@@ -92,4 +110,4 @@ function gestionventas() {
     )
 }
 
-export default gestionventas
+export default Gestionventas

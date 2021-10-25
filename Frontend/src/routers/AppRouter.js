@@ -1,15 +1,17 @@
 import React from 'react'
-import { Switch, BrowserRouter as Router, Route} from "react-router-dom";
+import { Switch, BrowserRouter as Router} from "react-router-dom";
 import Login from '../components/Login';
 import MenuRouter from './MenuRouter';
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 
 export const AppRouter = () => {
     return (
         <Router>
             <div>
                 <Switch>
-                    <Route exact path="/Login" component={Login} />
-                    <Route path="/ " component={MenuRouter} />
+                    <PublicRoute exact path="/login" component={ Login } />
+                    <PrivateRoute path="/" component={ MenuRouter } />  
                     {/* <Redirect to = "/Login" /> */}
                 </Switch>
             </div>

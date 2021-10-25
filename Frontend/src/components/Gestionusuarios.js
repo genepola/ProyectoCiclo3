@@ -3,7 +3,6 @@ import '../App.css'
 import Agregar from '../assets/img/Agregar.png';
 import Headergestusuarios from './Headergestusuarios';
 import useAuth from '../hooks/useAuth';
-import Lapiz from '../assets/img/Lapis.png';
 import { Link } from "react-router-dom";
 import axios from 'axios'
 
@@ -13,25 +12,28 @@ const Gestionusuarios =() =>  {
 
     const [usuarios, setUsuarios] = useState([]);
 
-    const responseGoogle = async (response) => {
+    const ListarUsuarios = async () => {
         try {
             const { status, data } = await axios({
                 method: 'GET',
                 url: 'http://localhost:4500/proyecto/auth/listar',
                 headers: {
-                    'Authorization': `Bearer ${auth}`
+                    'Authorization': `Bearer ${auth.token}`
                 }
             });
-           
-            setUsuarios(data.usuarios);
-            console.log(usuarios);
+           if(status===200){
+               setUsuarios(data.usuarios);
+               console.log(usuarios);
+           }else{
+               console.log("Error");
+           }
         } catch (error) {
             console.log(error);
         }
     }
 
     useEffect(()=>{
-        responseGoogle();
+        ListarUsuarios();
     }, []);
 
     return (

@@ -21,11 +21,13 @@ const usuarioSchema = Schema({
     roles:{
         type: Schema.Types.ObjectId,
         ref: 'role',
+        default: '6161e389fba65a4e8b2b0050',
         require: true
     },
     estado:{
         type: Schema.Types.ObjectId,
         ref: 'status',
+        default: '6166ec2caf75b084cdec9996',
         require: true
     },
     idToken:{
