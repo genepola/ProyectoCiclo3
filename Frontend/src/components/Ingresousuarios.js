@@ -26,9 +26,11 @@ const initialForm = {
             url: 'http://localhost:4500/proyecto/auth/new',
             headers: { "Content-Type": "application/json" },
             data: {
-                name: 'Rodigro',
-                email: 'Meneses',
-                cedula: 42344
+                cedula:document.getElementById('ID').value,
+                name: document.getElementById('Nombre').value,
+                email: document.getElementById('Email').value,
+/*                 estado: document.getElementById('estado').Writable,
+                roles:document.getElementById('rol').Writable */
 
             },
         };
@@ -46,9 +48,6 @@ const initialForm = {
 
     const Ingresousuarios = () => {
 
-        const [formValues, handleInputChange, reset] = useForms(initialForm);
-        const { ID, Nombre, Email, SeleccionRol, SeleccionEstado } = formValues
-
         return (
             <div>
                 <Headeringresousu />
@@ -57,41 +56,41 @@ const initialForm = {
                         <table id="tablaIngresoDatos">
                             <tr>
                                 <td><h5>ID</h5></td>
-                                <td className="Izquierda"><input type="text" size="70" maxlength="60" name="ID" onChange={handleInputChange} /></td>
+                                <td className="Izquierda"><input type="text" size="70" maxlength="60" name="ID" id="ID" /></td>
                             </tr>
 
                             <tr>
                                 <td><h5>Nombre</h5></td>
-                                <td className="Izquierda"><input type="text" size="70" maxlength="60" name="Nombre" onChange={handleInputChange}  /></td>
+                                <td className="Izquierda"><input type="text" size="70" maxlength="60" name="Nombre" id="Nombre"/></td>
                             </tr>
 
                             <tr>
                                 <td><h5>Email</h5></td>
-                                <td className="Izquierda"><input type="text" size="70" maxlength="60" name="Email" onChange={handleInputChange}  /></td>
+                                <td className="Izquierda"><input type="text" size="70" maxlength="60" name="Email" id="Email" /></td>
                             </tr>
 
                             <tr>
                                 <td><h5>Roles de usuario</h5></td>
-                                <td className="Izquierda"><select name="SeleccionRol">
+                                <td className="Izquierda"><select name="SeleccionRol" id="Rol">
 
                                     <option>Administrador</option>
 
                                     <option>Vendedor</option>
-                                    onChange={handleInputChange} 
+                                    
                                 </select></td>
                             </tr>
 
                             <tr>
                                 <td><h5>Estado del usuario</h5></td>
                                 <td className="Izquierda">
-                                    <select name="SeleccionEstado">
+                                    <select id="estado">
 
                                         <option value="Ivan">Pendiente</option>
 
                                         <option value="asdasd">Autorizado</option>
 
                                         <option>No autorizado</option>
-                                        onChange={handleInputChange} 
+                                     
                                     </select>
                                 </td>
                             </tr>
