@@ -233,7 +233,7 @@ const validarUsuarioGoogle = async (req, resp = response)=>{
                 token
             })
         }else{
-            usuario = new Usuario({ name, email, password: uid, idToken:uid, cedula: 4561});
+            usuario = new Usuario({ name, email, password: uid, idToken:uid, cedula: 10229});
             console.log("Entro else",usuario);
             const newUser = await usuario.save();
             console.log("Entro else",newUser);
