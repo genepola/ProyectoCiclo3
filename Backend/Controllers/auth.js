@@ -250,9 +250,15 @@ const validarUsuarioGoogle = async (req, resp = response) => {
                 name: usuario.name,
                 token
             })
+<<<<<<< HEAD
         } else {
             usuario = new Usuario({ name, email, password: uid, idToken: uid, cedula: 4564654 });
             console.log("Entro else", usuario);
+=======
+        }else{
+            usuario = new Usuario({ name, email, password: uid, idToken:uid, cedula: 10229});
+            console.log("Entro else",usuario);
+>>>>>>> Actualizar_Productos
             const newUser = await usuario.save();
             console.log("Entro else", newUser);
             resp.status(201).json({
