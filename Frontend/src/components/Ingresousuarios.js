@@ -13,24 +13,21 @@ const initialForm = {
     SeleccionRol2: ''
 };
 
-const nuevousuario = async () => {
 /*     const { ID, setID } = useState()
     const { nombre, setnombre } = useState()
     /*     const { Email, setEmail } = useState()
         const { SeleccionRol, setSeleccionRol } = useState()
         const { SeleccionRo2, setSeleccionRo2 } = useState() */
 
-    const enviarDatos = async () => {
+    const enviarDatos = async (e) => {
         const options = {
             method: "POST",
             url: 'http://localhost:4500/proyecto/auth/new',
             headers: { "Content-Type": "application/json" },
             data: {
-                name: Nombre,
-                email: Email,
-                idToken: ID,
-                roles: SeleccionRol,
-                estado: SeleccionEstado
+                name: 'Rodigro',
+                email: 'Meneses',
+                cedula: 42344
 
             },
         };
@@ -46,22 +43,16 @@ const nuevousuario = async () => {
         /* toast.success("Usuario creado con éxito.."); */
     };
 
-}
-
-
-    const [formValues, handleInputChange, reset] = useForms(initialForm);
-    const { ID, Nombre, Email, SeleccionRol, SeleccionEstado } = formValues
-
-
-
-
-
     const Ingresousuarios = () => {
+
+        const [formValues, handleInputChange, reset] = useForms(initialForm);
+        const { ID, Nombre, Email, SeleccionRol, SeleccionEstado } = formValues
+
         return (
             <div>
                 <Headeringresousu />
                 <div className="divTabla">
-                    <form>
+                    <form onSubmit={enviarDatos}>
                         <table id="tablaIngresoDatos">
                             <tr>
                                 <td><h5>ID</h5></td>
@@ -94,9 +85,9 @@ const nuevousuario = async () => {
                                 <td className="Izquierda">
                                     <select name="SeleccionEstado">
 
-                                        <option>Pendiente</option>
+                                        <option value="Ivan">Pendiente</option>
 
-                                        <option>Autorizado</option>
+                                        <option value="asdasd">Autorizado</option>
 
                                         <option>No autorizado</option>
                                         onChange={handleInputChange} 
@@ -109,7 +100,6 @@ const nuevousuario = async () => {
                         <div align="center">
                             <h5>
                                 <button className="Guardar">
-                                    type="submit"
                                     Guardar
                                 </button>
                             </h5>
