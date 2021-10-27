@@ -44,7 +44,11 @@ const Login = () =>{
                     <input class="controles" type="password" name="Contraseña" placeholder="Contraseña" />
                     <input class="botones" type="submit" name="" value="Ingresar" />
                     <GoogleLogin
+<<<<<<< HEAD
                         clientId="91017389739-bssvesn7urkt9hkub27535rlqegf0r41.apps.googleusercontent.com"
+=======
+                        clientId="628863302465-kcd66rre1l01gtt8bishe6i0scvv46n8.apps.googleusercontent.com"
+>>>>>>> Actualizar_Productos
                         buttonText="Login"
                         onSuccess={responseGoogle}
                         onFailure={responseGoogle}
