@@ -1,7 +1,7 @@
 import React from 'react'
 import '../App.css'
 import Headeringresousu from './Headeringresousu';
-import useForm from '../hooks/Useform';
+import useForms from '../hooks/Useform';
 import axios from "axios";
 
 
@@ -43,13 +43,13 @@ const nuevousuario = async () => {
             .catch(function (error) {
                 console.error(error);
             });
-        toast.success("Usuario creado con éxito..");
+        /* toast.success("Usuario creado con éxito.."); */
     };
 
 }
 
 
-    const [formValues, handleInputChange, reset] = useForm(initialForm);
+    const [formValues, handleInputChange, reset] = useForms(initialForm);
     const { ID, Nombre, Email, SeleccionRol, SeleccionEstado } = formValues
 
 
