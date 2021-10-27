@@ -3,6 +3,34 @@ import '../App.css'
 import Headeringresoventas from './Headeringresoventas';
 import Agregar from '../assets/img/Agregar.png';
 import Quitar from  '../assets/img/Quitar.png';
+import axios from "axios";
+
+const enviarDatos = async (e) => {
+    const options = {
+        method: "POST",
+        url: 'localhost:4500/proyecto/ventas/new',
+        headers: { "Content-Type": "application/json" },
+        data: {
+            Fecha:document.getElementById('Fecha').value,
+            Cedula: document.getElementById('cedula').value,
+            Cliente: document.getElementById('cliente').value,
+            Cantidad: document.getElementById('cantidad').value,
+/*              estado: document.getElementById('estado').Writable,
+            roles:document.getElementById('rol').Writable */
+
+        },
+    };
+
+    await axios
+        .request(options)
+        .then(function (response) {
+            console.log(response.data);
+        })
+        .catch(function (error) {
+            console.error(error);
+        });
+    /* toast.success("Usuario creado con éxito.."); */
+};
 
 const Ingresoventas = (props) => {
     return (
@@ -10,11 +38,11 @@ const Ingresoventas = (props) => {
             <Headeringresoventas id={props.match.params.id}/> 
             <div class="divFiltros">
                 <ul>
-                    <li>Fecha de venta <input type="date" name="fechaVenta" /></li>
+                    <li>Fecha de venta <input type="date" name="fechaVenta" id="Fecha" /></li>
                 </ul>
                 <ul>
                 <li>
-                Identificación <input type ="text" name="cliente" id="cliente" class ="txtNit"/>
+                Identificación <input type ="text" name="cliente" id="cedula" class ="txtNit"/>
                 Cliente<input type ="text" name="cliente" id="cliente" class ="txtCliente"/>
                 </li>
                 </ul>
@@ -74,9 +102,11 @@ const Ingresoventas = (props) => {
                 <div class ="labelTotal2">
                 <button class ="btnGuardarVentas">Guardar
                 </button>
-                </div>
 
                 </div>
+                
+                </div>
+                <form/>
             </div>
      )
 }
