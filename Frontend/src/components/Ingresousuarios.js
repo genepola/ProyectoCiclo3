@@ -46,11 +46,11 @@ const initialForm = {
         /* toast.success("Usuario creado con éxito.."); */
     };
 
-    const Ingresousuarios = () => {
+    const Ingresousuarios = (props) => {
 
         return (
             <div>
-                <Headeringresousu />
+                <Headeringresousu id={props.match.params.id}/>
                 <div className="divTabla">
                     <form onSubmit={enviarDatos}>
                         <table id="tablaIngresoDatos">

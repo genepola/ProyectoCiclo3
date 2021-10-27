@@ -36,7 +36,7 @@ const crearUsuario = async (req, res = response) => {
     }
 }
 const getusuarios = async (req, resp = response) => {
-    const usuarios = await Usuario.find().populate('roles','name').populate('estado','status');
+    const usuarios = await Usuario.find().populate('roles', 'name').populate('estado', 'status');
     resp.status(200).json({
         ok: true,
         msg: 'Lista de Usuarios',
@@ -216,14 +216,32 @@ const findById = async (req, resp = response) => {
     }
 }
 
-const validarUsuarioGoogle = async (req, resp = response)=>{
+const validarUsuarioGoogle = async (req, resp = response) => {
     const { uid, name, email } = req;
-    
+
     try {
-        let usuario = await Usuario.findOne({ email, idToken: uid});
-        console.log(usuario);
-        if(usuario){
-            console.log("Entro acá",usuario);
+        let usuario = await Usuario.findOne({ email, idToken: uid }).populate('estado');
+        console.log("ACAAA estado: ",usuario.estado.status);
+        if (usuario) {
+            if (usuario.estado.status === 'Pendiente' || usuario.estado.status === 'No autorizado') {
+
+                resp.status(401).json({
+                    ok: false,
+                    msg: 'El usuario aun no ha sido autorizado por el administrador'
+                });
+            } else {
+
+                /**Generar Token */
+                const token = await generarJWT(usuario.id, usuario.name);
+
+                resp.json({
+                    ok: true,
+                    msg: 'Ok',
+                    uid: usuario.id,
+                    name: usuario.name,
+                    token
+                });
+            }
             const token = await generarJWT(usuario);
             resp.json({
                 ok: true,
@@ -232,11 +250,11 @@ const validarUsuarioGoogle = async (req, resp = response)=>{
                 name: usuario.name,
                 token
             })
-        }else{
-            usuario = new Usuario({ name, email, password: uid, idToken:uid, cedula: 4564654});
-            console.log("Entro else",usuario);
+        } else {
+            usuario = new Usuario({ name, email, password: uid, idToken: uid, cedula: 4564654 });
+            console.log("Entro else", usuario);
             const newUser = await usuario.save();
-            console.log("Entro else",newUser);
+            console.log("Entro else", newUser);
             resp.status(201).json({
                 ok: true,
                 msg: 'Usuario creado de manera exitosa',
@@ -251,7 +269,7 @@ const validarUsuarioGoogle = async (req, resp = response)=>{
             msg: 'Error al autenticar'
         });
     }
-   
+
 }
 
 

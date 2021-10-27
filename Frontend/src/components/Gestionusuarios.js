@@ -4,6 +4,7 @@ import Agregar from '../assets/img/Agregar.png';
 import Headergestusuarios from './Headergestusuarios';
 import useAuth from '../hooks/useAuth';
 import { Link } from "react-router-dom";
+import Lapiz from '../assets/img/Lapis.png';
 import axios from 'axios'
 
 const Gestionusuarios =() =>  {
@@ -43,7 +44,7 @@ const Gestionusuarios =() =>  {
         <ul>
             <li>
 
-            <Link to="Ingresousuarios"><img src={Agregar} alt=""/></Link>
+            <Link to="Ingresousuarios/new"><img src={Agregar} alt=""/></Link>
                 <span>Nuevo Usuario</span>
 
                 {/* <img src="Imagenes/Agregar.png" alt=""> */}
@@ -76,7 +77,7 @@ const Gestionusuarios =() =>  {
                             <td>{usuarios.name}</td>
                             <td>{usuarios.roles.name}</td>
                             <td>{usuarios.estado.status}</td>
-
+                            <td><Link to="Ingresousuarios/edit"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
                         </tr>
                     ))
                 }

@@ -3,12 +3,14 @@ import Agenda from '../assets/img/Agenda.png';
 import { Link } from "react-router-dom";
 
 
-const Headeringresousu = () => {
+const Headeringresousu = (props) => {
+    const id = props.id==="edit"?"EDITAR":"AGREGAR";
+    console.log(props.id);
     return (
         <div>
             <div id="headerPpal" className="headerPpal-expanded">
                 <img src={Agenda} alt="" />
-                <span>INGRESO/EDICIÓN DE USUARIO</span>
+                <span>{id} USUARIO</span>
                 <Link to="Login"> <button id ="Cerrar" className="Cerrar">
                     Cerrar sesión
                 </button></Link>

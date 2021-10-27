@@ -30,7 +30,7 @@ function MenuRouter() {
                 </Switch>
 
                 <Switch>
-                    <Route exact path="/Ingresousuarios" component={Ingresousuarios} />
+                    <Route exact path="/Ingresousuarios/:id" component={Ingresousuarios} />
                 </Switch>
 
                 <Switch>

@@ -25,13 +25,12 @@ const Login = () =>{
             }else if(status === 201){
                 notie.alert({ text: data.msg, type: 'success', time: 10 });
             }
-        } catch (error) {
-            console.log(error);
-            /*if (error.response.status === 401) {
+        } catch (error) {          
+            if (error.response.status === 401) {
                 notie.alert({ text: error.response.data.msg, type: 'warning', time: 10 });
             } else {
                 notie.alert({ text: error.response.data.msg, type: 'error', time: 10 });
-            }*/
+            }
         }
     }
 
