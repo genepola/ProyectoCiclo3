@@ -24,7 +24,6 @@ const Gestionusuarios =() =>  {
             });
            if(status===200){
                setUsuarios(data.usuarios);
-               console.log(usuarios);
            }else{
                console.log("Error");
            }
@@ -77,7 +76,7 @@ const Gestionusuarios =() =>  {
                             <td>{usuarios.name}</td>
                             <td>{usuarios.roles.name}</td>
                             <td>{usuarios.estado.status}</td>
-                            <td><Link to="Ingresousuarios/edit"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
+                            <td><Link to={{pathname:"Ingresousuarios/edit", listUsuarios:{usuarios}  }}> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
                         </tr>
                     ))
                 }

@@ -221,8 +221,9 @@ const validarUsuarioGoogle = async (req, resp = response) => {
 
     try {
         let usuario = await Usuario.findOne({ email, idToken: uid }).populate('estado');
-        console.log("ACAAA estado: ",usuario.estado.status);
+
         if (usuario) {
+
             if (usuario.estado.status === 'Pendiente' || usuario.estado.status === 'No autorizado') {
 
                 resp.status(401).json({

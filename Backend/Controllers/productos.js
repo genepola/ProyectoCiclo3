@@ -61,7 +61,7 @@ const actualizarProducto = async (req, resp = response) => {
 
         resp.json({
             ok:true,
-            msg: 'actulizar producto',
+            msg: 'Prodcuto correctamente actualizado',
             producto: productoActualizado
         });
     } catch (error) {

@@ -25,7 +25,6 @@ const Gestionproductos =() =>{
             });
            if(status===200){
                 setProductos(data.productos);
-               console.log(productos);
            }else{
                console.log("Error");
            }
@@ -42,29 +41,24 @@ const Gestionproductos =() =>{
 
         <div>
             <Headergestproduct />
-        <div class="iconosVentas">
+        <div className="iconosVentas">
         <ul>
             <li>
-            <Link to="Ingresoproductos"><img src={Agregar} alt=""/></Link>
+            <Link to="Ingresoproductos/new"><img src={Agregar} alt=""/></Link>
                 <span>Nuevo Producto</span>
-                {/* <img src="Imagenes/Agregar.png" alt=""> */}
-                {/* <div class="title"><span><Link to="Ingresoproductos">Nuevo Producto</Link></span></div> */}
-                {/* <img src="Imagenes/Agregar.png" alt=""> */}
-                {/* <div class="title"><span><Link to="Ingresoproductos">Nuevo Producto</Link></span></div> */}
-
             </li>
         </ul>
             
     </div>
-    <div class="filtro">
+    <div className="filtro">
         <span>Filtro</span>
-        <select class="redondo">
+        <select className="redondo">
             <option value="">ID producto</option>
             <option value="">Descripcion</option>
         </select>
-        <input type="text" class="redondo"/>
+        <input type="text" className="redondo"/>
     </div>
-    <div class="divTabla">
+    <div className="divTabla">
         <table>
             <tr>
                 <th>Id Producto</th>
@@ -80,7 +74,7 @@ const Gestionproductos =() =>{
                             <td>{productos.Descripcion}</td>
                             <td>{productos.ValorUnitario}</td>
                             <td>{productos.Estado}</td>
-                            <td><Link to="Ingresoproductos"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
+                            <td><Link to={{pathname:"Ingresoproductos/edit", listProductos:{productos}  }}> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
                         </tr>
                     ))
                 }

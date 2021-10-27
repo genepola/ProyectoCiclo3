@@ -22,7 +22,7 @@ function MenuRouter() {
                 </Switch>
 
                 <Switch>
-                    <Route exact path="/Ingresoproductos" component={Ingresoproductos} />
+                    <Route exact path="/Ingresoproductos/:id" component={Ingresoproductos} />
                 </Switch>
 
                 <Switch>
