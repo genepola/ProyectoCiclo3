@@ -38,7 +38,6 @@ const Gestionproductos =() =>{
         ListarProductos();
     }, []);
 
-
     return (
 
         <div>
@@ -80,7 +79,8 @@ const Gestionproductos =() =>{
                             <td>{productos.ID}</td>
                             <td>{productos.Descripcion}</td>
                             <td>{productos.ValorUnitario}</td>
-                            <td><Link to={{pathname:"Ingresoproductos/", listProduct:{productos}  }}> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
+                            <td>{productos.Estado}</td>
+                            <td><Link to="Ingresoproductos"> <img src={Lapiz}  alt="" id="img_lapiz" /></Link></td>
                         </tr>
                     ))
                 }
