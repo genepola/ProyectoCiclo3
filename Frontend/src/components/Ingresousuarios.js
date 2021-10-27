@@ -10,9 +10,13 @@ const initialForm = {
     Nombre: '',
     Email: '',
     SeleccionRol: '',
-    SeleccionRol2: ''
+    SeleccionEstado: ''
 };
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 /*     const { ID, setID } = useState()
     const { nombre, setnombre } = useState()
     /*     const { Email, setEmail } = useState()
@@ -25,9 +29,14 @@ const initialForm = {
             url: 'http://localhost:4500/proyecto/auth/new',
             headers: { "Content-Type": "application/json" },
             data: {
+<<<<<<< Updated upstream
                 name: 'Rodigro',
                 email: 'Meneses',
                 cedula: 42344
+=======
+                name: 'Rodrigo',
+                email: 'meneses.rodrigo@hotmail.com'
+>>>>>>> Stashed changes
 
             },
         };
@@ -43,11 +52,18 @@ const initialForm = {
         /* toast.success("Usuario creado con éxito.."); */
     };
 
+<<<<<<< Updated upstream
     const Ingresousuarios = () => {
 
         const [formValues, handleInputChange, reset] = useForms(initialForm);
         const { ID, Nombre, Email, SeleccionRol, SeleccionEstado } = formValues
 
+=======
+
+    const Ingresousuarios = () => {
+        const [formValues, handleInputChange, reset] = useForms(initialForm);
+        const { ID, Nombre, Email, SeleccionRol, SeleccionEstado } = formValues
+>>>>>>> Stashed changes
         return (
             <div>
                 <Headeringresousu />
